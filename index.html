@@ -5,7 +5,6 @@
     <title>School</title>
     <meta name="description" content="Школа 40 9Б" />
     <link rel="icon" href="assets/images/favicon.png" />
-    <meta name="keywords" content="" />
     <link rel="stylesheet" href="assets/css/style.css" />
     <meta name="viewport" content="width=device-width , initial-scale=1" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -14,7 +13,6 @@
       href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;700&family=Rubik+Mono+One&display=swap"
       rel="stylesheet"
     />
-    <meta name="google" content="notranslate" />
     <link
       rel="stylesheet"
       type="text/css"
@@ -29,17 +27,25 @@
           <div class="header__inner" id="nav">
             <div class="autor">
               <a class="autor__avatar" href="#">
-                <img
-                  data-scroll="#intro"
-                  class="autor__avatar-photo"
-                  src="/assets/images/AvatarOnHeader.jpg"
-                  alt="Аватарка Никита.С и Рома.Р"
-                />
+                <picture>
+                  <source
+                    type="image/webp"
+                    data-scroll="#intro"
+                    class="autor__avatar-photo"
+                    srcset="assets/images/AvatarOnHeaderMin.webp"
+                  />
+                  <img
+                    data-scroll="#intro"
+                    class="autor__avatar-photo"
+                    src="assets/images/AvatarOnHeader.jpg"
+                    alt="Аватарка Никита.С и Рома.Р"
+                  />
+                </picture>
               </a>
-              <div class="autor__content">
-                <div class="autor__names">Roma.R and Nikita.S</div>
-                <div class="autor__prof">Front end developers</div>
-              </div>
+              <p class="autor__content">
+                <span class="autor__names">Roma.R and Nikita.S</span><br />
+                <span class="autor__prof">Front end developers</span>
+              </p>
             </div>
             <nav class="nav">
               <a href="#" class="nav__link" data-scroll="#begin">начало</a>
@@ -102,29 +108,29 @@
               <h2 class="section__title">Начало</h2>
             </div>
 
-            <div class="block">
-              <div class="block__text">
-                <p>
+            <figure class="block">
+              <figcaption>
+                <p class="block__text">
                   Начало нашего класса пошло с 3-го, посколько к этому времени в
                   наш класс пришли люди которые и посей день с нами . А вот фото
                   на котором нам примерно от 7-8 лет мы были в 3 классе
                 </p>
-              </div>
+              </figcaption>
               <div class="block__photo">
                 <img
                   class="block__img"
-                  src="/assets/images/firstBigPhoto.jpg"
+                  src="assets/images/firstBigPhoto.jpg"
                   alt="Фото с 3 класса"
                 />
               </div>
-              <div class="block__text">
-                <p>
+              <figcaption>
+                <p class="block__text">
                   Изначально в нашем классе появились люди которые, уже знали
                   друг друга поскольку, были из одного сада , но были и другие,
                   как и я, в общем, в конце концов мы все подружились.
                 </p>
-              </div>
-            </div>
+              </figcaption>
+            </figure>
           </div>
         </section>
         <!-- History -->
@@ -135,88 +141,76 @@
 
           <div class="history">
             <div class="history__items">
-              <div class="history__item">
-                <div class="history__photo">
-                  <img src="https://via.placeholder.com/100x100" alt="" />
-                </div>
+              <article class="history__item">
+                <img class="history__photo" src="https://via.placeholder.com/100x100" alt="" />
                 <div class="history__content">
-                  <div class="history__text">
+                  <p class="history__text">
                     Lorem molestias totam reiciendis, hic assumenda porro sit
                     deserunt magnam facere ullam dignissimos soluta sapiente
                     possimus repudiandae quaerat itaque. Aperiam, cumque harum?
                     assumenda porro sit deserunt magnam facere ullam
-                  </div>
-                  <div class="history__autor">Roman .R</div>
+                  </p>
+                  <cite class="history__autor">Roman .R</cite>
                 </div>
-              </div>
-              <div class="history__item">
-                <div class="history__photo">
-                  <img src="https://via.placeholder.com/100x100" alt="" />
-                </div>
+              </article>
+              <article class="history__item">
+                <img class="history__photo" src="https://via.placeholder.com/100x100" alt="" />
                 <div class="history__content">
-                  <div class="history__text">
+                  <p class="history__text">
                     Lorem ipsum dolor sit amet consectetur adipisicing elit.
                     Fugiat molestias totam reiciendis, hic assumenda porro
                     repudiandae quaerat itaque. Aperiam, cumque harum?
-                  </div>
-                  <div class="history__autor">Roman .R</div>
+                  </p>
+                  <cite class="history__autor">Roman .R</cite>
                 </div>
-              </div>
-              <div class="history__item">
-                <div class="history__photo">
-                  <img src="https://via.placeholder.com/100x100" alt="" />
-                </div>
+              </article>
+              <article class="history__item">
+                <img class="history__photo" src="https://via.placeholder.com/100x100" alt="" />
                 <div class="history__content">
-                  <div class="history__text">
+                  <p class="history__text">
                     Lorem molestias totam reiciendis, hic assumenda porro sit
                     deserunt magnam facere ullam dignissimos soluta sapiente
                     possimus repudiandae quaerat itaque. Aperiam, cumque harum?
-                  </div>
-                  <div class="history__autor">Roman .R</div>
+                  </p>
+                  <cite class="history__autor">Roman .R</cite>
                 </div>
-              </div>
-              <div class="history__item">
-                <div class="history__photo">
-                  <img src="https://via.placeholder.com/100x100" alt="" />
-                </div>
+              </article>
+              <article class="history__item">
+                <img class="history__photo" src="https://via.placeholder.com/100x100" alt="" />
                 <div class="history__content">
-                  <div class="history__text">
+                  <p class="history__text">
                     Lorem ipsum dolor sit amet consectetur adipisicing elit.
                     Fugiat molestias totam reiciendis, hic assumenda porro
                     repudiandae quaerat itaque. Aperiam, cumque harum? Lorem
                     ipsum dolor sit amet consectetur adipisicing elit. Fugiat
                     molestias totam reiciendis, hic assumenda porro repudiandae
                     quaerat itaque. Aperiam, cumque harum?
-                  </div>
-                  <div class="history__autor">Roman .R</div>
+                  </p>
+                  <cite class="history__autor">Roman .R</cite>
                 </div>
-              </div>
-              <div class="history__item">
-                <div class="history__photo">
-                  <img src="https://via.placeholder.com/100x100" alt="" />
-                </div>
+              </article>
+              <article class="history__item">
+                <img class="history__photo" src="https://via.placeholder.com/100x100" alt="" />
                 <div class="history__content">
-                  <div class="history__text">
+                  <p class="history__text">
                     Lorem molestias totam reiciendis, hic assumenda porro sit
                     deserunt magnam facere ullam dignissimos soluta sapiente
                     possimus repudiandae quaerat itaque. Aperiam, cumque harum?
-                  </div>
-                  <div class="history__autor">Roman .R</div>
+                  </p>
+                  <cite class="history__autor">Roman .R</cite>
                 </div>
-              </div>
-              <div class="history__item">
-                <div class="history__photo">
-                  <img src="https://via.placeholder.com/100x100" alt="" />
-                </div>
+              </article>
+              <article class="history__item">
+                <img class="history__photo" src="https://via.placeholder.com/100x100" alt="" />
                 <div class="history__content">
-                  <div class="history__text">
+                  <p class="history__text">
                     Lorem ipsum dolor sit amet consectetur adipisicing elit.
                     Fugiat molestias totam reiciendis, hic assumenda porro
                     repudiandae quaerat itaque. Aperiam, cumque harum?
-                  </div>
-                  <div class="history__autor">Roman .R</div>
+                  </p>
+                  <cite class="history__autor">Roman .R</cite>
                 </div>
-              </div>
+              </article>
             </div>
           </div>
         </section>
@@ -225,109 +219,106 @@
           <div class="section__header">
             <h2 class="section__title">Галерея</h2>
           </div>
+
           <div class="images">
             <div class="images__container">
               <div class="images__image">
+
                 <div class="image__photo image__photo-big">
                   <img
                     class="image__img"
                     src="assets/images/Gallery/image4.jpg"
-                    alt="Что-то пошло не так..."
+                    alt="Перебрались в старшие классы"
                   />
                 </div>
                 <div class="image__photo">
                   <img
                     class="image__img"
                     src="assets/images/Gallery/image10.jpg"
-                    alt="Что-то пошло не так..."
+                    alt="В поездке с классом"
                   />
                 </div>
-
                 <div class="image__photo">
                   <img
                     class="image__img"
                     src="assets/images/Gallery/image6.jpg"
-                    alt="Что-то пошло не так..."
+                    alt="1 сентебря"
                   />
                 </div>
                 <div class="image__photo">
                   <img
                     class="image__img"
                     src="assets/images/Gallery/image7.jpg"
-                    alt="Что-то пошло не так..."
+                    alt="Ярмарка"
                   />
                 </div>
                 <div class="image__photo">
                   <img
                     class="image__img"
                     src="assets/images/Gallery/image8.jpg"
-                    alt="Что-то пошло не так..."
+                    alt="Поездка с классом"
                   />
                 </div>
-
                 <div class="image__photo">
                   <img
                     class="image__img"
                     src="assets/images/Gallery/image12.jpg"
-                    alt="Что-то пошло не так..."
+                    alt="После школы"
                   />
                 </div>
-
                 <div class="image__photo image__photo-bigV">
                   <img
                     class="image__img"
                     src="assets/images/Gallery/image2.jpg"
-                    alt="Что-то пошло не так..."
+                    alt="В поездке"
                   />
                 </div>
-
                 <div class="image__photo image__photo-big">
                   <img
                     class="image__img"
                     src="assets/images/Gallery/image5.jpg"
-                    alt="Что-то пошло не так..."
+                    alt="Мероприятие в лесу ,катаемся на ватрушках)"
                   />
                 </div>
-
                 <div class="image__photo image__photo-big">
                   <img
                     class="image__img"
                     src="assets/images/Gallery/image13.jpg"
-                    alt="Что-то пошло не так..."
+                    alt="Что-то пошло не так... Богдан Костерин и Фотошоп"
                   />
                 </div>
-
                 <div class="image__photo image__photo-bigV">
                   <img
                     class="image__img"
                     src="assets/images/Gallery/image11.jpg"
-                    alt="Что-то пошло не так..."
+                    alt="Девчонки после ярмарки"
                   />
                 </div>
-
                 <div class="image__photo">
                   <img
                     class="image__img"
                     src="assets/images/Gallery/image9.jpg"
-                    alt="Что-то пошло не так..."
+                    alt="Гуляем с друзьями"
                   />
                 </div>
-
                 <div class="image__photo">
                   <img
                     class="image__img"
                     src="assets/images/Gallery/image3.jpg"
-                    alt="Что-то пошло не так..."
+                    alt="Фоткаемся в школе"
                   />
                 </div>
-
                 <div class="image__photo">
-                  <img
+                  <picture>
+                    <source class="image__img" type="image/webp" srcset="assets/images/Gallery/image14M.webp">
+                    <img
                     class="image__img"
                     src="assets/images/Gallery/image14.jpg"
-                    alt="Что-то пошло не так..."
+                    alt="Заехали в столовую вовремя поездки"
                   />
+                  </picture>
                 </div>
+
               </div>
             </div>
           </div>
@@ -341,8 +332,9 @@
 
             <div class="fullwe">
               <div data-slider>
+
                 <div>
-                  <div class="fullwe__item">
+                  <article class="fullwe__item">
                     <div class="fullwe__photo">
                       <img
                         class="img"
@@ -351,12 +343,12 @@
                       />
                     </div>
                     <div class="fullwe__block">
-                      <div class="fullwe__initials">Рома Черепьянов</div>
+                      <cite class="fullwe__initials">Рома Черепьянов</cite>
                     </div>
-                  </div>
+                  </article>
                 </div>
                 <div>
-                  <div class="fullwe__item">
+                  <article class="fullwe__item">
                     <div class="fullwe__photo">
                       <img
                         class="img"
@@ -365,12 +357,12 @@
                       />
                     </div>
                     <div class="fullwe__block">
-                      <div class="fullwe__initials">Никита Самарин</div>
+                      <cite class="fullwe__initials">Никита Самарин</cite>
                     </div>
-                  </div>
+                  </article>
                 </div>
                 <div>
-                  <div class="fullwe__item">
+                  <article class="fullwe__item">
                     <div class="fullwe__photo">
                       <img
                         class="img"
@@ -379,12 +371,12 @@
                       />
                     </div>
                     <div class="fullwe__block">
-                      <div class="fullwe__initials">Михаил Котюсов</div>
+                      <cite class="fullwe__initials">Михаил Котюсов</cite>
                     </div>
-                  </div>
+                  </article>
                 </div>
                 <div>
-                  <div class="fullwe__item">
+                  <article class="fullwe__item">
                     <div class="fullwe__photo">
                       <img
                         class="img"
@@ -393,13 +385,12 @@
                       />
                     </div>
                     <div class="fullwe__block">
-                      <div class="fullwe__initials">Женя Красиков</div>
+                      <cite class="fullwe__initials">Женя Красиков</cite>
                     </div>
-                  </div>
+                  </article>
                 </div>
-
                 <div>
-                  <div class="fullwe__item">
+                  <article class="fullwe__item">
                     <div class="fullwe__photo">
                       <img
                         class="img"
@@ -408,12 +399,12 @@
                       />
                     </div>
                     <div class="fullwe__block">
-                      <div class="fullwe__initials">Ангелина Игнатова</div>
+                      <cite class="fullwe__initials">Ангелина Игнатова</cite>
                     </div>
-                  </div>
+                  </article>
                 </div>
                 <div>
-                  <div class="fullwe__item">
+                  <article class="fullwe__item">
                     <div class="fullwe__photo">
                       <img
                         class="img"
@@ -422,12 +413,12 @@
                       />
                     </div>
                     <div class="fullwe__block">
-                      <div class="fullwe__initials">Владислава Советникова</div>
+                      <cite class="fullwe__initials">Владислава Советникова</cite>
                     </div>
-                  </div>
+                  </article>
                 </div>
                 <div>
-                  <div class="fullwe__item">
+                  <article class="fullwe__item">
                     <div class="fullwe__photo">
                       <img
                         class="img"
@@ -436,12 +427,12 @@
                       />
                     </div>
                     <div class="fullwe__block">
-                      <div class="fullwe__initials">Ахалая Иракли</div>
+                      <cite class="fullwe__initials">Ахалая Иракли</cite>
                     </div>
-                  </div>
+                  </article>
                 </div>
                 <div>
-                  <div class="fullwe__item">
+                  <article class="fullwe__item">
                     <div class="fullwe__photo">
                       <img
                         class="img"
@@ -450,12 +441,12 @@
                       />
                     </div>
                     <div class="fullwe__block">
-                      <div class="fullwe__initials">Савина Милана</div>
+                      <cite class="fullwe__initials">Савина Милана</cite>
                     </div>
-                  </div>
+                  </article>
                 </div>
                 <div>
-                  <div class="fullwe__item">
+                  <article class="fullwe__item">
                     <div class="fullwe__photo">
                       <img
                         class="img"
@@ -464,12 +455,12 @@
                       />
                     </div>
                     <div class="fullwe__block">
-                      <div class="fullwe__initials">Екатерина Корунова</div>
+                      <cite class="fullwe__initials">Екатерина Корунова</cite>
                     </div>
-                  </div>
+                  </article>
                 </div>
                 <div>
-                  <div class="fullwe__item">
+                  <article class="fullwe__item">
                     <div class="fullwe__photo">
                       <img
                         class="img"
@@ -478,12 +469,12 @@
                       />
                     </div>
                     <div class="fullwe__block">
-                      <div class="fullwe__initials">Лапин Арсений</div>
+                      <cite class="fullwe__initials">Лапин Арсений</cite>
                     </div>
-                  </div>
+                  </article>
                 </div>
                 <div>
-                  <div class="fullwe__item">
+                  <article class="fullwe__item">
                     <div class="fullwe__photo">
                       <img
                         class="img"
@@ -492,12 +483,12 @@
                       />
                     </div>
                     <div class="fullwe__block">
-                      <div class="fullwe__initials">Кириллов Давид</div>
+                      <cite class="fullwe__initials">Кириллов Давид</cite>
                     </div>
-                  </div>
+                  </article>
                 </div>
                 <div>
-                  <div class="fullwe__item">
+                  <article class="fullwe__item">
                     <div class="fullwe__photo">
                       <img
                         class="img"
@@ -506,12 +497,12 @@
                       />
                     </div>
                     <div class="fullwe__block">
-                      <div class="fullwe__initials">Настя Малич</div>
+                      <cite class="fullwe__initials">Настя Малич</cite>
                     </div>
-                  </div>
+                  </article>
                 </div>
                 <div>
-                  <div class="fullwe__item">
+                  <article class="fullwe__item">
                     <div class="fullwe__photo">
                       <img
                         class="img"
@@ -520,12 +511,12 @@
                       />
                     </div>
                     <div class="fullwe__block">
-                      <div class="fullwe__initials">Кищенко Максим</div>
+                      <cite class="fullwe__initials">Кищенко Максим</cite>
                     </div>
-                  </div>
+                  </article>
                 </div>
                 <div>
-                  <div class="fullwe__item">
+                  <article class="fullwe__item">
                     <div class="fullwe__photo">
                       <img
                         class="img"
@@ -534,12 +525,12 @@
                       />
                     </div>
                     <div class="fullwe__block">
-                      <div class="fullwe__initials">Илья Алубаев</div>
+                      <cite class="fullwe__initials">Илья Алубаев</cite>
                     </div>
-                  </div>
+                  </article>
                 </div>
                 <div>
-                  <div class="fullwe__item">
+                  <article class="fullwe__item">
                     <div class="fullwe__photo">
                       <img
                         class="img"
@@ -548,12 +539,12 @@
                       />
                     </div>
                     <div class="fullwe__block">
-                      <div class="fullwe__initials">Злата Грачева</div>
+                      <cite class="fullwe__initials">Злата Грачева</cite>
                     </div>
-                  </div>
+                  </article>
                 </div>
                 <div>
-                  <div class="fullwe__item">
+                  <article class="fullwe__item">
                     <div class="fullwe__photo">
                       <img
                         class="img"
@@ -562,12 +553,12 @@
                       />
                     </div>
                     <div class="fullwe__block">
-                      <div class="fullwe__initials">Александр Барбунц</div>
+                      <cite class="fullwe__initials">Александр Барбунц</cite>
                     </div>
-                  </div>
+                  </article>
                 </div>
                 <div>
-                  <div class="fullwe__item">
+                  <article class="fullwe__item">
                     <div class="fullwe__photo">
                       <img
                         class="img"
@@ -576,10 +567,11 @@
                       />
                     </div>
                     <div class="fullwe__block">
-                      <div class="fullwe__initials">Александр Супрунов</div>
+                      <cite class="fullwe__initials">Александр Супрунов</cite>
                     </div>
-                  </div>
+                  </article>
                 </div>
+
               </div>
             </div>
           </div>
@@ -590,16 +582,18 @@
             <div class="section__header">
               <h2 class="section__title">Конец</h2>
             </div>
-            <div class="block">
-              <div class="block__text">
-                <p>
+
+            <figure class="block">
+              <figcaption>
+                <p class="block__text">
                   Конец наступает всегда и везде. Его никак не избежать, просто
                   для кого-то конец наступил в 9 классе, а кто-то лишь отложит
                   его до 11-го (лично я нет!). За эти годы мы пережили многое,
                   было грустно, весело, в некоторые моменты опасно, но мы были
                   вместе.
                 </p>
-              </div>
+              </figcaption>
+              
               <div class="block__photo">
                 <img
                   class="block__img"
@@ -607,8 +601,8 @@
                   alt="Фото с 3 класса"
                 />
               </div>
-              <div class="block__text">
-                <p>
+              <figcaption>
+                <p class="block__text">
                   Мы поддерживали друг друга в разных ситуациях (не все и не
                   всегда, но все-же), мы вместе шли к концу 9-го класса, и вот
                   он настал. Кто-то уйдет, кто-то останется на подольше, но
@@ -617,24 +611,25 @@
                   про эти счастливые годы, был создан этот сайт, чтобы иногда
                   заходить и вспоминать, как это было...
                 </p>
-              </div>
-            </div>
+              </figcaption>
+            </figure>
+
           </div>
         </section>
       </main>
       <!-- Footer -->
       <footer class="footer">
         <div class="container">
-          <div class="footer__inner">
-            <div class="footer__when">
+          <section class="footer__inner">
+            <article class="footer__when">
               <div class="footer__time">
-                <div class="footer__questions">Когда? -</div>
-                <div class="footer__date">2022-06-22</div>
+                <p class="footer__questions">Когда? -</p>
+                <time class="footer__date" datetime="2022-06-22 20:00" >2022-06-22</time>
               </div>
-            </div>
-            <div class="footer__who">
+            </article>
+            <article class="footer__who">
               <div class="footer__social">
-                <div class="footer__questions">Кто? -</div>
+                <p class="footer__questions">Кто? -</p>
                 <div class="footer__person">
                   <a
                     class="footer__name"
@@ -664,19 +659,19 @@
                   /></a>
                 </div>
               </div>
-            </div>
-          </div>
+            </article>
+          </section>
         </div>
       </footer>
       <!-- Modal -->
-      <div class="modal" id="modal_resume">
+      <section class="modal" id="modal_resume">
         <div class="modal__dialog">
           <button class="model__close" type="button" data-close>
             <img src="assets/images/close.svg" alt="close" />
           </button>
           <div class="modal__content">
-            <div class="modal__title">О нас</div>
-            <div class="modal__content-nikita">
+            <p class="modal__title">О нас</p>
+            <article class="modal__content-nikita">
               <div class="modal__image modal__image-nikita">
                 <img
                   class="modal__image-photo"
@@ -684,15 +679,13 @@
                   alt="Загрузка..."
                 />
               </div>
-              <div class="modal__text">
-                <p>
-                  Это Никита Самарин. Он занимается fronte-end разработкой. Что
-                  это? Это типа создание сайтов, так что вот, а это он делал с
-                  человеком ниже.
-                </p>
-              </div>
-            </div>
-            <div class="modal__content-roma">
+              <p class="modal__text">
+                Это Никита Самарин. Он занимается fronte-end разработкой. Что
+                это? Это типа создание сайтов, так что вот, а это он делал с
+                человеком ниже.
+              </p>
+            </article>
+            <article class="modal__content-roma">
               <div class="modal__image modal__image-roma">
                 <img
                   class="modal__image-photo"
@@ -700,17 +693,15 @@
                   alt="Загрузка..."
                 />
               </div>
-              <div class="modal__text">
-                <p>
-                  Дарова это Ромчик , занимаюсь fronte-end-ом и поскольку на 8
-                  класс сайт уже есть ,а скилл подрос решил сделать к 9 классу
-                  вместе с человеком выше.
-                </p>
-              </div>
-            </div>
+              <p class="modal__text">
+                Дарова это Ромчик , занимаюсь fronte-end-ом и поскольку на 8
+                класс сайт уже есть ,а скилл подрос решил сделать к 9 классу
+                вместе с человеком выше.
+              </p>
+            </article>
           </div>
         </div>
-      </div>
+      </section>
     </div>
 
     <!--Jquery -->
