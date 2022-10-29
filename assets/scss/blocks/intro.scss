@@ -1,0 +1,79 @@
+.intro {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   background: url("../images/intro.jpg") center no-repeat;
+   background-size: cover;
+   height: 750px;
+   background-color: rgb(102, 62, 233);
+}
+
+.intro__inner {
+   width: 100%;
+   margin: 0 auto;
+   color: #fff;
+   text-align: center; 
+
+   padding: 16.0666rem 0;
+   background-color: rgba( rgb(4, 5, 42),  .9);
+}
+
+.intro__title{
+   font-family: 'Rubik Mono One', sans-serif;
+
+   font-size: 9rem;
+   font-weight: 400;
+   line-height: 1;
+
+   text-shadow: 0 0 33px rgba(rgb(34, 34, 34) , .33);
+
+   & span{
+      font-size: 6rem;
+   }
+
+}
+
+//Media
+@media (max-width: 992px){
+   .intro__inner{
+      padding: 18rem 0;
+   }
+   .intro__title{
+      font-size: 7rem;
+
+      & span{
+         font-size: 4rem;
+      }
+   }
+}
+@media (max-width: 576px) {
+   .intro__title{
+      font-size: 5rem;
+
+      & span{
+         font-size: 3rem;
+      }
+   }
+   .intro__inner{
+      padding: 13.33rem 0;
+   }
+   .intro{
+      height: 550px;
+   }
+}
+
+@media (max-width: 414px) {
+   .intro__title{
+      font-size: 4.22rem;
+
+      & span{
+         font-size: 2.22rem;
+      }
+   }
+   .intro{
+      height: 500px;
+   }
+   .intro__inner{
+      padding: 12.5rem 0;
+   }
+}

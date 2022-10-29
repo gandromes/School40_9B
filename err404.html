@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@400&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="icon" href="/assets/images/error/errorIcon.png">
+    <meta name="google" content="notranslate" />
+    <link rel="stylesheet" href="assets/css/styleError.css" />
+    <title>Ошибка 404!</title>
+  </head>
+  <body class="err">
+    <figure class="err__container">
+      <picture class="err__img">
+        <source type="image/webp" srcset="assets/images/error/err404.webp" />
+        <img src="assets/images/error/err404.png" alt="Ошибка 404!" />
+      </picture>
+      <figcaption class="err__text">
+        Хей! Здесь ничего нет!<br />Мы вернемся куда надо через
+        <span id="changeing">n</span> секунд...
+      </figcaption>
+    </figure>
+    <script>
+      changeFromTo(5, 0, changeing)
+      function changeFromTo(from, to, changingItem) {
+        if (from > to) {
+          ;(changingItem.textContent = from--) &&
+            setTimeout(() => changeFromTo(...arguments), 1000)
+        } else
+          document.head.innerHTML +=
+            '<meta http-equiv="Refresh" content="0 index.html">'
+      }
+    </script>
+  </body>
+</html>

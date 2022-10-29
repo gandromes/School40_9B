@@ -1,0 +1,741 @@
+<!-- Сообщаем браузеру как стоит обрабатывать эту страницу -->
+<!DOCTYPE html>
+<!-- Оболочка документа, указываем язык содержимого -->
+<html lang="ru">
+  <!-- Заголовок страницы, контейнер для других важных данных (не отображается) -->
+  <head>
+    <!-- Кодировка страницы -->
+    <meta charset="UTF-8" />
+    <!-- Заголовок страницы в браузере -->
+    <title>School</title>
+    <!-- Описание -->
+    <meta name="description" content="Школа 40 9Б" />
+    <!-- Icon -->
+    <link rel="icon" href="assets/images/favicon.png" />
+    <!-- Key words -->
+    <meta name="keywords" content="" />
+    <!-- Подключаем CSS -->
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <!-- Адаптив -->
+    <meta name="viewport" content="width=device-width , initial-scale=1" />
+    <!-- Текста-->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;700&family=Rubik+Mono+One&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Translate y/n -->
+    <meta name="google" content="notranslate" />
+    <!-- Biblio -->
+    <!-- Slider -->
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"
+    />
+  </head>
+  <!-- Отображаемое тело страницы -->
+  <body>
+    <div class="wrapper">
+      <!-- Header -->
+      <header class="header" id="header">
+        <div class="container">
+          <div class="header__inner" id="nav">
+            <div class="autor">
+              <a class="autor__avatar" href="#">
+                <img
+                  data-scroll="#intro"
+                  class="autor__avatar-photo"
+                  src="/assets/images/AvatarOnHeader.jpg"
+                  alt="Аватарка Никита.С и Рома.Р"
+                />
+              </a>
+              <div class="autor__content">
+                <div class="autor__names">Roma.R and Nikita.S</div>
+                <div class="autor__prof">Front end developers</div>
+              </div>
+            </div>
+            <nav class="nav">
+              <a href="#" class="nav__link" data-scroll="#begin">начало</a>
+              <a href="#" class="nav__link" data-scroll="#history">истории</a>
+              <a href="#" class="nav__link" data-scroll="#gallery">галерея</a>
+              <a href="#" class="nav__link" data-scroll="#fullwe">все мы</a>
+              <a href="#" class="nav__link" data-scroll="#end">конец</a>
+              <button
+                type="button"
+                class="nav__link nav__link--btn"
+                data-modal="#modal_resume"
+              >
+                о нас
+              </button>
+              <svg
+                id="swithTopic"
+                class="nav__link swith__topic"
+                style="enable-background: new 0 0 32 32"
+                version="1.1"
+                viewBox="0 0 32 32"
+                xml:space="preserve"
+                xmlns="http://www.w3.org/2000/svg"
+                xmlns:xlink="http://www.w3.org/1999/xlink"
+              >
+                <g>
+                  <path
+                    d="M8.2,9.6c0.2,0.2,0.5,0.3,0.7,0.3s0.5-0.1,0.7-0.3c0.4-0.4,0.4-1,0-1.4L7.5,6.1c-0.4-0.4-1-0.4-1.4,0s-0.4,1,0,1.4L8.2,9.6   z"
+                  />
+                  <path
+                    d="M7,16c0-0.6-0.4-1-1-1H3c-0.6,0-1,0.4-1,1s0.4,1,1,1h3C6.6,17,7,16.6,7,16z"
+                  />
+                  <path
+                    d="M8.2,22.4l-2.1,2.1c-0.4,0.4-0.4,1,0,1.4c0.2,0.2,0.5,0.3,0.7,0.3s0.5-0.1,0.7-0.3l2.1-2.1c0.4-0.4,0.4-1,0-1.4   S8.6,22,8.2,22.4z"
+                  />
+                </g>
+                <path
+                  d="M29.4,16.2c-0.4-0.2-0.9-0.1-1.2,0.3c-0.8,1-2,1.5-3.2,1.5c-2.3,0-4.3-1.9-4.3-4.3c0-1.6,0.9-3,2.3-3.8  c0.4-0.2,0.6-0.7,0.5-1.1C23.4,8.4,23,8,22.5,8c-0.1,0-0.3,0-0.4,0c-1.9,0-3.7,0.7-5.1,1.8V3c0-0.6-0.4-1-1-1s-1,0.4-1,1v5.1  c-3.9,0.5-7,3.9-7,7.9s3.1,7.4,7,7.9V29c0,0.6,0.4,1,1,1s1-0.4,1-1v-6.8c1.4,1.2,3.2,1.8,5.1,1.8c4,0,7.3-2.9,7.9-6.8  C30.1,16.8,29.8,16.3,29.4,16.2z M17,20c0,0.6-0.4,1-1,1s-1-0.4-1-1v-8c0-0.6,0.4-1,1-1s1,0.4,1,1V20z"
+                />
+              </svg>
+              <!--<img src="/assets/images/whiteCangeBlack.svg" id="swithTopic" class="nav__link swith__topic">-->
+            </nav>
+            <button type="button" class="burger" id="navToggle">
+              <span class="burger__item">Menu</span>
+            </button>
+          </div>
+        </div>
+      </header>
+      <!-- Main -->
+      <main class="main">
+        <!-- Intro -->
+        <div class="intro" id="intro">
+          <div class="intro__inner">
+            <h1 class="intro__title">9Б <br /><span>школа 40</span></h1>
+          </div>
+        </div>
+        <!-- Begin -->
+        <section class="section" id="begin">
+          <div class="container">
+            <div class="section__header">
+              <h2 class="section__title">Начало</h2>
+            </div>
+
+            <div class="block">
+              <div class="block__text">
+                <p>
+                  Начало нашего класса пошло с 3-го, посколько к этому времени в
+                  наш класс пришли люди которые и посей день с нами . А вот фото
+                  на котором нам примерно от 7-8 лет мы были в 3 классе
+                </p>
+              </div>
+              <div class="block__photo">
+                <img
+                  class="block__img"
+                  src="/assets/images/firstBigPhoto.jpg"
+                  alt="Фото с 3 класса"
+                />
+              </div>
+              <div class="block__text">
+                <p>
+                  Изначально в нашем классе появились люди которые, уже знали
+                  друг друга поскольку, были из одного сада , но были и другие,
+                  как и я, в общем, в конце концов мы все подружились.
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+        <!-- History -->
+        <section class="section" id="history">
+          <div class="section__header">
+            <h2 class="section__title">Истории</h2>
+          </div>
+
+          <div class="history">
+            <div class="history__items">
+              <div class="history__item">
+                <div class="history__photo">
+                  <img src="https://via.placeholder.com/100x100" alt="" />
+                </div>
+                <div class="history__content">
+                  <div class="history__text">
+                    Lorem molestias totam reiciendis, hic assumenda porro sit
+                    deserunt magnam facere ullam dignissimos soluta sapiente
+                    possimus repudiandae quaerat itaque. Aperiam, cumque harum?
+                    assumenda porro sit deserunt magnam facere ullam
+                  </div>
+                  <div class="history__autor">Roman .R</div>
+                </div>
+              </div>
+              <div class="history__item">
+                <div class="history__photo">
+                  <img src="https://via.placeholder.com/100x100" alt="" />
+                </div>
+                <div class="history__content">
+                  <div class="history__text">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Fugiat molestias totam reiciendis, hic assumenda porro
+                    repudiandae quaerat itaque. Aperiam, cumque harum?
+                  </div>
+                  <div class="history__autor">Roman .R</div>
+                </div>
+              </div>
+              <div class="history__item">
+                <div class="history__photo">
+                  <img src="https://via.placeholder.com/100x100" alt="" />
+                </div>
+                <div class="history__content">
+                  <div class="history__text">
+                    Lorem molestias totam reiciendis, hic assumenda porro sit
+                    deserunt magnam facere ullam dignissimos soluta sapiente
+                    possimus repudiandae quaerat itaque. Aperiam, cumque harum?
+                  </div>
+                  <div class="history__autor">Roman .R</div>
+                </div>
+              </div>
+              <div class="history__item">
+                <div class="history__photo">
+                  <img src="https://via.placeholder.com/100x100" alt="" />
+                </div>
+                <div class="history__content">
+                  <div class="history__text">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Fugiat molestias totam reiciendis, hic assumenda porro
+                    repudiandae quaerat itaque. Aperiam, cumque harum? Lorem
+                    ipsum dolor sit amet consectetur adipisicing elit. Fugiat
+                    molestias totam reiciendis, hic assumenda porro repudiandae
+                    quaerat itaque. Aperiam, cumque harum?
+                  </div>
+                  <div class="history__autor">Roman .R</div>
+                </div>
+              </div>
+              <div class="history__item">
+                <div class="history__photo">
+                  <img src="https://via.placeholder.com/100x100" alt="" />
+                </div>
+                <div class="history__content">
+                  <div class="history__text">
+                    Lorem molestias totam reiciendis, hic assumenda porro sit
+                    deserunt magnam facere ullam dignissimos soluta sapiente
+                    possimus repudiandae quaerat itaque. Aperiam, cumque harum?
+                  </div>
+                  <div class="history__autor">Roman .R</div>
+                </div>
+              </div>
+              <div class="history__item">
+                <div class="history__photo">
+                  <img src="https://via.placeholder.com/100x100" alt="" />
+                </div>
+                <div class="history__content">
+                  <div class="history__text">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Fugiat molestias totam reiciendis, hic assumenda porro
+                    repudiandae quaerat itaque. Aperiam, cumque harum?
+                  </div>
+                  <div class="history__autor">Roman .R</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <!-- Gallery-->
+        <section class="section" id="gallery">
+          <div class="section__header">
+            <h2 class="section__title">Галерея</h2>
+          </div>
+          <div class="images">
+            <div class="images__container">
+              <div class="images__image">
+                <div class="image__photo image__photo-big">
+                  <img
+                    class="image__img"
+                    src="assets/images/Gallery/image4.jpg"
+                    alt="Что-то пошло не так..."
+                  />
+                </div>
+                <div class="image__photo">
+                  <img
+                    class="image__img"
+                    src="assets/images/Gallery/image10.jpg"
+                    alt="Что-то пошло не так..."
+                  />
+                </div>
+
+                <div class="image__photo">
+                  <img
+                    class="image__img"
+                    src="assets/images/Gallery/image6.jpg"
+                    alt="Что-то пошло не так..."
+                  />
+                </div>
+                <div class="image__photo">
+                  <img
+                    class="image__img"
+                    src="assets/images/Gallery/image7.jpg"
+                    alt="Что-то пошло не так..."
+                  />
+                </div>
+                <div class="image__photo">
+                  <img
+                    class="image__img"
+                    src="assets/images/Gallery/image8.jpg"
+                    alt="Что-то пошло не так..."
+                  />
+                </div>
+
+                <div class="image__photo">
+                  <img
+                    class="image__img"
+                    src="assets/images/Gallery/image12.jpg"
+                    alt="Что-то пошло не так..."
+                  />
+                </div>
+
+                <div class="image__photo image__photo-bigV">
+                  <img
+                    class="image__img"
+                    src="assets/images/Gallery/image2.jpg"
+                    alt="Что-то пошло не так..."
+                  />
+                </div>
+
+                <div class="image__photo image__photo-big">
+                  <img
+                    class="image__img"
+                    src="assets/images/Gallery/image5.jpg"
+                    alt="Что-то пошло не так..."
+                  />
+                </div>
+
+                <div class="image__photo image__photo-big">
+                  <img
+                    class="image__img"
+                    src="assets/images/Gallery/image13.jpg"
+                    alt="Что-то пошло не так..."
+                  />
+                </div>
+
+                <div class="image__photo image__photo-bigV">
+                  <img
+                    class="image__img"
+                    src="assets/images/Gallery/image11.jpg"
+                    alt="Что-то пошло не так..."
+                  />
+                </div>
+
+                <div class="image__photo">
+                  <img
+                    class="image__img"
+                    src="assets/images/Gallery/image9.jpg"
+                    alt="Что-то пошло не так..."
+                  />
+                </div>
+
+                <div class="image__photo">
+                  <img
+                    class="image__img"
+                    src="assets/images/Gallery/image3.jpg"
+                    alt="Что-то пошло не так..."
+                  />
+                </div>
+
+                <div class="image__photo">
+                  <img
+                    class="image__img"
+                    src="assets/images/Gallery/image14.jpg"
+                    alt="Что-то пошло не так..."
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <!-- Fullwe -->
+        <section class="section section--slider" id="fullwe">
+          <div class="container">
+            <div class="section__header">
+              <h2 class="section__title">Все мы</h2>
+            </div>
+
+            <div class="fullwe">
+              <div data-slider>
+                <div>
+                  <div class="fullwe__item">
+                    <div class="fullwe__photo">
+                      <img
+                        class="img"
+                        src="assets/images/sliderFullMe/RomaRomanov.jpg"
+                        alt="Рома Черепьянов"
+                      />
+                    </div>
+                    <div class="fullwe__block">
+                      <div class="fullwe__initials">Рома Черепьянов</div>
+                    </div>
+                  </div>
+                </div>
+                <div>
+                  <div class="fullwe__item">
+                    <div class="fullwe__photo">
+                      <img
+                        class="img"
+                        src="assets/images/sliderFullMe/Nikita.jpg"
+                        alt="Никита Самарин"
+                      />
+                    </div>
+                    <div class="fullwe__block">
+                      <div class="fullwe__initials">Никита Самарин</div>
+                    </div>
+                  </div>
+                </div>
+                <div>
+                  <div class="fullwe__item">
+                    <div class="fullwe__photo">
+                      <img
+                        class="img"
+                        src="assets/images/sliderFullMe/Miha.jpg"
+                        alt="Михаил Котюсов"
+                      />
+                    </div>
+                    <div class="fullwe__block">
+                      <div class="fullwe__initials">Михаил Котюсов</div>
+                    </div>
+                  </div>
+                </div>
+                <div>
+                  <div class="fullwe__item">
+                    <div class="fullwe__photo">
+                      <img
+                        class="img"
+                        src="assets/images/sliderFullMe/JeniaKrasicov.jpg"
+                        alt="Женя Красиков"
+                      />
+                    </div>
+                    <div class="fullwe__block">
+                      <div class="fullwe__initials">Женя Красиков</div>
+                    </div>
+                  </div>
+                </div>
+
+                <div>
+                  <div class="fullwe__item">
+                    <div class="fullwe__photo">
+                      <img
+                        class="img"
+                        src="assets/images/sliderFullMe/AngelinaIgnatova.jpg"
+                        alt="Ангелина Игнатова"
+                      />
+                    </div>
+                    <div class="fullwe__block">
+                      <div class="fullwe__initials">Ангелина Игнатова</div>
+                    </div>
+                  </div>
+                </div>
+                <div>
+                  <div class="fullwe__item">
+                    <div class="fullwe__photo">
+                      <img
+                        class="img"
+                        src="assets/images/sliderFullMe/Vlada.jpg"
+                        alt="Владислава Советникова"
+                      />
+                    </div>
+                    <div class="fullwe__block">
+                      <div class="fullwe__initials">Владислава Советникова</div>
+                    </div>
+                  </div>
+                </div>
+                <div>
+                  <div class="fullwe__item">
+                    <div class="fullwe__photo">
+                      <img
+                        class="img"
+                        src="assets/images/sliderFullMe/irak.jpg"
+                        alt="Ахалая Иракли"
+                      />
+                    </div>
+                    <div class="fullwe__block">
+                      <div class="fullwe__initials">Ахалая Иракли</div>
+                    </div>
+                  </div>
+                </div>
+                <div>
+                  <div class="fullwe__item">
+                    <div class="fullwe__photo">
+                      <img
+                        class="img"
+                        src="assets/images/sliderFullMe/Milana.jpg"
+                        alt="Савина Милана"
+                      />
+                    </div>
+                    <div class="fullwe__block">
+                      <div class="fullwe__initials">Савина Милана</div>
+                    </div>
+                  </div>
+                </div>
+                <div>
+                  <div class="fullwe__item">
+                    <div class="fullwe__photo">
+                      <img
+                        class="img"
+                        src="assets/images/sliderFullMe/Korunova.jpg"
+                        alt="Екатерина Корунова"
+                      />
+                    </div>
+                    <div class="fullwe__block">
+                      <div class="fullwe__initials">Екатерина Корунова</div>
+                    </div>
+                  </div>
+                </div>
+                <div>
+                  <div class="fullwe__item">
+                    <div class="fullwe__photo">
+                      <img
+                        class="img"
+                        src="assets/images/sliderFullMe/Lapin.jpg"
+                        alt="Лапин Арсений"
+                      />
+                    </div>
+                    <div class="fullwe__block">
+                      <div class="fullwe__initials">Лапин Арсений</div>
+                    </div>
+                  </div>
+                </div>
+                <div>
+                  <div class="fullwe__item">
+                    <div class="fullwe__photo">
+                      <img
+                        class="img"
+                        src="assets/images/sliderFullMe/David.jpg"
+                        alt="Кириллов Давид"
+                      />
+                    </div>
+                    <div class="fullwe__block">
+                      <div class="fullwe__initials">Кириллов Давид</div>
+                    </div>
+                  </div>
+                </div>
+                <div>
+                  <div class="fullwe__item">
+                    <div class="fullwe__photo">
+                      <img
+                        class="img"
+                        src="assets/images/sliderFullMe/Malich.jpg"
+                        alt="Настя Малич"
+                      />
+                    </div>
+                    <div class="fullwe__block">
+                      <div class="fullwe__initials">Настя Малич</div>
+                    </div>
+                  </div>
+                </div>
+                <div>
+                  <div class="fullwe__item">
+                    <div class="fullwe__photo">
+                      <img
+                        class="img"
+                        src="assets/images/sliderFullMe/Meks.jpg"
+                        alt="Кищенко Максим"
+                      />
+                    </div>
+                    <div class="fullwe__block">
+                      <div class="fullwe__initials">Кищенко Максим</div>
+                    </div>
+                  </div>
+                </div>
+                <div>
+                  <div class="fullwe__item">
+                    <div class="fullwe__photo">
+                      <img
+                        class="img"
+                        src="assets/images/sliderFullMe/izum.jpg"
+                        alt="Илья Алубаев"
+                      />
+                    </div>
+                    <div class="fullwe__block">
+                      <div class="fullwe__initials">Илья Алубаев</div>
+                    </div>
+                  </div>
+                </div>
+                <div>
+                  <div class="fullwe__item">
+                    <div class="fullwe__photo">
+                      <img
+                        class="img"
+                        src="assets/images/sliderFullMe/Zlata.jpg"
+                        alt="Злата Грачева"
+                      />
+                    </div>
+                    <div class="fullwe__block">
+                      <div class="fullwe__initials">Злата Грачева</div>
+                    </div>
+                  </div>
+                </div>
+                <div>
+                  <div class="fullwe__item">
+                    <div class="fullwe__photo">
+                      <img
+                        class="img"
+                        src="assets/images/sliderFullMe/Barbara.jpg"
+                        alt="Александр Барбунц"
+                      />
+                    </div>
+                    <div class="fullwe__block">
+                      <div class="fullwe__initials">Александр Барбунц</div>
+                    </div>
+                  </div>
+                </div>
+                <div>
+                  <div class="fullwe__item">
+                    <div class="fullwe__photo">
+                      <img
+                        class="img"
+                        src="assets/images/sliderFullMe/Supra.jpg"
+                        alt="Александр Супрунов"
+                      />
+                    </div>
+                    <div class="fullwe__block">
+                      <div class="fullwe__initials">Александр Супрунов</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <!-- End-->
+        <section class="section" id="end">
+          <div class="container">
+            <div class="section__header">
+              <h2 class="section__title">Конец</h2>
+            </div>
+            <div class="block">
+              <div class="block__text">
+                <p>
+                  Конец наступает всегда и везде. Его никак не избежать, просто
+                  для кого-то конец наступил в 9 классе, а кто-то лишь отложит
+                  его до 11-го (лично я нет!). За эти годы мы пережили многое,
+                  было грустно, весело, в некоторые моменты опасно, но мы были
+                  вместе.
+                </p>
+              </div>
+              <div class="block__photo">
+                <img
+                  class="block__img"
+                  src="https://via.placeholder.com/1280x960"
+                  alt="Фото с 3 класса"
+                />
+              </div>
+              <div class="block__text">
+                <p>
+                  Мы поддерживали друг друга в разных ситуациях (не все и не
+                  всегда, но все-же), мы вместе шли к концу 9-го класса, и вот
+                  он настал. Кто-то уйдет, кто-то останется на подольше, но
+                  все-равно уйдет... Каждого из нас ждет светлое будущее, может
+                  мы и будем пересекаться, время покажет... И чтобы не забывать
+                  про эти счастливые годы, был создан этот сайт, чтобы иногда
+                  заходить и вспоминать, как это было...
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+      </main>
+      <!-- Footer -->
+      <footer class="footer">
+        <div class="container">
+          <div class="footer__inner">
+            <div class="footer__when">
+              <div class="footer__time">
+                <div class="footer__questions">Когда? -</div>
+                <div class="footer__date">2022-06-22</div>
+              </div>
+            </div>
+            <div class="footer__who">
+              <div class="footer__social">
+                <div class="footer__questions">Кто? -</div>
+                <div class="footer__person">
+                  <a
+                    class="footer__name"
+                    href="https://vk.com/id485387854"
+                    target="_blank"
+                    >Roma. R.
+                    <img
+                      class="footer__icons"
+                      src="assets/images/vk.svg"
+                      width="30"
+                      height="20"
+                      alt=""
+                  /></a>
+                </div>
+                <div class="footer__person">
+                  <a
+                    href="https://vk.com/id311673929"
+                    class="footer__name"
+                    target="_blank"
+                    >Nikita. S.
+                    <img
+                      class="footer__icons"
+                      src="assets/images/vk.svg"
+                      width="30"
+                      height="20"
+                      alt=""
+                  /></a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </footer>
+      <!-- Modal -->
+      <div class="modal" id="modal_resume">
+        <div class="modal__dialog">
+          <button class="model__close" type="button" data-close>
+            <img src="assets/images/close.svg" alt="close" />
+          </button>
+          <div class="modal__content">
+            <div class="modal__title">О нас</div>
+            <div class="modal__content-nikita">
+              <div class="modal__image modal__image-nikita">
+                <img
+                  class="modal__image-photo"
+                  src="assets/images/aboutus/nikita.jpg"
+                  alt="Загрузка..."
+                />
+              </div>
+              <div class="modal__text">
+                <p>
+                  Это Никита Самарин. Он занимается fronte-end разработкой. Что
+                  это? Это типа создание сайтов, так что вот, а это он делал с
+                  человеком ниже.
+                </p>
+              </div>
+            </div>
+            <div class="modal__content-roma">
+              <div class="modal__image modal__image-roma">
+                <img
+                  class="modal__image-photo"
+                  src="assets/images/aboutus/roma.jpg"
+                  alt="Загрузка..."
+                />
+              </div>
+              <div class="modal__text">
+                <p>
+                  Дарова это Ромчик , занимаюсь fronte-end-ом и поскольку на 8
+                  класс сайт уже есть ,а скилл подрос решил сделать к 9 классу
+                  вместе с человеком выше.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!--Jquery -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <!-- ScriptSlick -->
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"
+    ></script>
+    <!-- JavaScript -->
+    <script src="assets/js/script.js"></script>
+  </body>
+</html>
