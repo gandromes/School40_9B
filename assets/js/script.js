@@ -7,6 +7,23 @@ swithTopic.onclick = () => {
   localStorage.topic = document.body.className || 'light'
 }
 
+//SupportedCSS for background-attachment
+function supportedCSS(value) {
+  try {
+    const style = document.body.style
+    if (!('backgroundAttachment' in style)) return false
+    const oldValue = style.backgroundAttachment
+    style.backgroundAttachment = 'fixed'
+    const isSupported = style.backgroundAttachment === value
+    style.backgroundAttachment = oldValue
+    return isSupported
+  } catch (e) {
+    return false
+  }
+}
+
+console.log(supportedCSS('fixed'))
+
 $(function () {
   let intro = $('#intro'),
     header = $('#header'),
