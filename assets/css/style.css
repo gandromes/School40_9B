@@ -417,10 +417,11 @@ p {
 }
 
 .intro__inner {
+  display: flex;
+  justify-content: center;
+  align-content: center;
   width: 100%;
   color: #fff;
-  margin: 0 auto;
-  text-align: center;
   padding: 16.0666rem 0;
   background-color: rgba(4, 5, 42, 0.9);
 }
