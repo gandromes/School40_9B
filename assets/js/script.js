@@ -22,7 +22,8 @@ function supportedCSS(value) {
   }
 }
 
-document.body.innerHTML += '<p>`${supportedCSS("fixed")}`</p>'
+console.log(supportedCSS('fixed'))
+document.body.innerHTML += supportedCSS('fixed')
 
 $(function () {
   let intro = $('#intro'),
