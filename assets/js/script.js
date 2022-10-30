@@ -1,25 +1,11 @@
 //swith topic
-if(!localStorage.topic) localStorage.topic = 'light'
+if (!localStorage.topic) localStorage.topic = 'light'
 document.body.className = localStorage.topic
 
 swithTopic.onclick = () => {
   document.body.classList.toggle('dark')
   localStorage.topic = document.body.className || 'light'
 }
-
-//SupportedCSS for background-attachment
-function supportedCSS(value, element) {
-  const style = getComputedStyle(element)
-  const oldValue = style.backgroundAttachment;
-  element.style.backgroundAttachmment = value
-  const isSupported = style.backgroundAttachment === value
-  element.style.backgroundAttachmment = oldValue
-  return isSupported
-}
-
-let p = document.createElement('p')
-p.innerText = supportedCSS('fixed', intro)
-document.body.appendChild(p)
 
 $(function () {
   let intro = $('#intro'),
