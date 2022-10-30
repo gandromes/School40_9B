@@ -23,7 +23,9 @@ function supportedCSS(value) {
 }
 
 console.log(supportedCSS('fixed'))
-document.body.innerHTML += supportedCSS('fixed')
+let p = document.createElement('p')
+p.innerText = supportedCSS('fixed')
+document.body.appendChild(p)
 
 $(function () {
   let intro = $('#intro'),
