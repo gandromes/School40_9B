@@ -410,7 +410,7 @@ p {
   user-select: none;
 }
 
-@media (max-width: 1024px){
+@media (max-width: 1024px) {
   .intro {
     background-attachment: scroll;
   }
@@ -418,8 +418,10 @@ p {
 
 .intro__inner {
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-content: center;
+  text-align: center;
   width: 100%;
   color: #fff;
   padding: 16.0666rem 0;
@@ -427,15 +429,18 @@ p {
 }
 
 .intro__title {
-  text-align: center;
   font-family: 'Rubik Mono One', sans-serif;
   font-size: 9rem;
   font-weight: 400;
   line-height: 1;
   text-shadow: 0 0 33px rgba(34, 34, 34, 0.33);
 }
-.intro__title span {
+.intro__title-h2 {
+  font-family: 'Rubik Mono One', sans-serif;
   font-size: 6rem;
+  font-weight: 400;
+  line-height: 1;
+  text-shadow: 0 0 33px rgba(34, 34, 34, 0.33);
 }
 
 @media (max-width: 992px) {
@@ -446,7 +451,7 @@ p {
   .intro__title {
     font-size: 7rem;
   }
-  .intro__title span {
+  .intro__title-h2 {
     font-size: 4rem;
   }
 }
@@ -454,7 +459,7 @@ p {
   .intro__title {
     font-size: 5rem;
   }
-  .intro__title span {
+  .intro__title-h2 {
     font-size: 3rem;
   }
 
@@ -470,7 +475,7 @@ p {
   .intro__title {
     font-size: 4.22rem;
   }
-  .intro__title span {
+  .intro__title-h2 {
     font-size: 2.22rem;
   }
 
