@@ -426,6 +426,7 @@ p {
 }
 
 .intro__title {
+  text-align: center;
   font-family: 'Rubik Mono One', sans-serif;
   font-size: 9rem;
   font-weight: 400;
