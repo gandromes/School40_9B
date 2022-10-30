@@ -418,6 +418,7 @@ p {
 
 .intro__inner {
   display: flex;
+
   flex-direction: column;
   justify-content: center;
   align-content: center;
@@ -435,7 +436,7 @@ p {
   line-height: 1;
   text-shadow: 0 0 33px rgba(34, 34, 34, 0.33);
 }
-.intro__title-h2 {
+.intro__suptitle {
   font-family: 'Rubik Mono One', sans-serif;
   font-size: 6rem;
   font-weight: 400;
@@ -451,7 +452,7 @@ p {
   .intro__title {
     font-size: 7rem;
   }
-  .intro__title-h2 {
+  .intro__suptitle {
     font-size: 4rem;
   }
 }
@@ -459,7 +460,7 @@ p {
   .intro__title {
     font-size: 5rem;
   }
-  .intro__title-h2 {
+  .intro__suptitle {
     font-size: 3rem;
   }
 
@@ -475,7 +476,7 @@ p {
   .intro__title {
     font-size: 4.22rem;
   }
-  .intro__title-h2 {
+  .intro__suptitle {
     font-size: 2.22rem;
   }
 
