@@ -482,15 +482,6 @@ p {
     padding: 12.5rem 0;
   }
 }
-@media (max-width: 330px){
-  .intro__title {
-    font-size: 2rem;
-  }
-  .intro__title span {
-    font-size: 1rem;
-    color: black;
-  }
-}
 
 .section {
   margin: 8rem 0;
