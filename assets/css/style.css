@@ -397,6 +397,9 @@ p {
   align-items: center;
   background: url('../images/intro.jpg') fixed 0 no-repeat;
   background-size: cover;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
   height: 750px;
   background-color: rgb(102, 62, 233);
   -moz-user-select: none;
