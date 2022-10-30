@@ -396,6 +396,7 @@ p {
   -ms-flex-align: center;
   align-items: center;
   background: url('../images/intro.jpg') 0 no-repeat;
+  background-attachment: fixed;
   background-size: cover;
   -webkit-background-size: cover;
   -moz-background-size: cover;

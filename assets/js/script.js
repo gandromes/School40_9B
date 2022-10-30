@@ -8,9 +8,9 @@ swithTopic.onclick = () => {
 }
 
 //SupportedCSS for background-attachment
-function supportedCSS(value) {
+function supportedCSS(value, element) {
   try {
-    const style = document.body.style
+    const style = element.style
     if (!('backgroundAttachment' in style)) return false
     const oldValue = style.backgroundAttachment
     style.backgroundAttachment = 'fixed'
@@ -24,7 +24,7 @@ function supportedCSS(value) {
 
 console.log(supportedCSS('fixed'))
 let p = document.createElement('p')
-p.innerText = supportedCSS('fixed')
+p.innerText = supportedCSS('fixed', intro)
 document.body.appendChild(p)
 
 $(function () {
