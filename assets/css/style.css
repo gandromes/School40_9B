@@ -1376,6 +1376,7 @@ body.dark .modal {
 }
 
 .modal__title {
+  color: var(--blue);
   font-weight: 700;
   font-size: 3rem;
   text-transform: uppercase;
@@ -1404,6 +1405,7 @@ body.dark .modal {
 }
 
 .modal__text {
+  color: var(--blue);
   font-size: 1.15rem;
 }
 .modal__text p {
