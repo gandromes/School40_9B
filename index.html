@@ -26,19 +26,20 @@
         <div class="container">
           <div class="header__inner" id="nav">
             <div class="autor">
-              <a class="autor__avatar" href="#">
+              <a class="autor__avatar" href="#" tabindex="0" aria-label="при нажатие - Можно вернуться на верх страницы">
                 <picture>
                   <source
                     type="image/webp"
                     data-scroll="#intro"
                     class="autor__avatar-photo"
+                    aria-label="Аватарка с Никита.С и Рома.Р"
                     srcset="assets/images/AvatarOnHeaderMin.webp"
                   />
                   <img
                     data-scroll="#intro"
                     class="autor__avatar-photo"
                     src="assets/images/AvatarOnHeader.jpg"
-                    alt="Аватарка Никита.С и Рома.Р"
+                    alt="Аватарка с Никита.С и Рома.Р"
                   />
                 </picture>
               </a>
@@ -61,6 +62,9 @@
                 о нас
               </button>
               <svg
+                tabindex="0"
+                aria-label="Смена темы"
+                role="button"
                 id="swithTopic"
                 class="nav__link swith__topic"
                 style="enable-background: new 0 0 32 32"
@@ -85,10 +89,9 @@
                   d="M29.4,16.2c-0.4-0.2-0.9-0.1-1.2,0.3c-0.8,1-2,1.5-3.2,1.5c-2.3,0-4.3-1.9-4.3-4.3c0-1.6,0.9-3,2.3-3.8  c0.4-0.2,0.6-0.7,0.5-1.1C23.4,8.4,23,8,22.5,8c-0.1,0-0.3,0-0.4,0c-1.9,0-3.7,0.7-5.1,1.8V3c0-0.6-0.4-1-1-1s-1,0.4-1,1v5.1  c-3.9,0.5-7,3.9-7,7.9s3.1,7.4,7,7.9V29c0,0.6,0.4,1,1,1s1-0.4,1-1v-6.8c1.4,1.2,3.2,1.8,5.1,1.8c4,0,7.3-2.9,7.9-6.8  C30.1,16.8,29.8,16.3,29.4,16.2z M17,20c0,0.6-0.4,1-1,1s-1-0.4-1-1v-8c0-0.6,0.4-1,1-1s1,0.4,1,1V20z"
                 />
               </svg>
-              <!--<img src="/assets/images/whiteCangeBlack.svg" id="swithTopic" class="nav__link swith__topic">-->
             </nav>
-            <button type="button" class="burger" id="navToggle">
-              <span class="burger__item">Menu</span>
+            <button aria-label="Открыть или закрыть, меню" type="button" class="burger" id="navToggle">
+              <span class="burger__item">Меню</span>
             </button>
           </div>
         </div>
@@ -632,6 +635,7 @@
                 <p class="footer__questions">Кто? -</p>
                 <div class="footer__person">
                   <a
+                    aria-label="Перейти во ВКонтакте к Roma. R."
                     class="footer__name"
                     href="https://vk.com/id485387854"
                     target="_blank"
@@ -646,6 +650,7 @@
                 </div>
                 <div class="footer__person">
                   <a
+                    aria-label="Перейти во ВКонтакте к Nikita. S."
                     href="https://vk.com/id311673929"
                     class="footer__name"
                     target="_blank"
@@ -664,9 +669,9 @@
         </div>
       </footer>
       <!-- Modal -->
-      <section class="modal" id="modal_resume">
+      <dialog class="modal" id="modal_resume">
         <div class="modal__dialog">
-          <button class="model__close" type="button" data-close>
+          <button aria-label="Закрыть модальное окно" class="model__close" type="button" data-close>
             <img src="assets/images/close.svg" alt="close" />
           </button>
           <div class="modal__content">
@@ -676,7 +681,7 @@
                 <img
                   class="modal__image-photo"
                   src="assets/images/aboutus/nikita.jpg"
-                  alt="Загрузка..."
+                  alt="Фото Никиты С"
                 />
               </div>
               <p class="modal__text">
@@ -690,7 +695,7 @@
                 <img
                   class="modal__image-photo"
                   src="assets/images/aboutus/roma.jpg"
-                  alt="Загрузка..."
+                  alt="Фото Ромы Р"
                 />
               </div>
               <p class="modal__text">
@@ -701,7 +706,7 @@
             </article>
           </div>
         </div>
-      </section>
+      </dialog>
     </div>
 
     <!--Jquery -->

@@ -54,7 +54,6 @@ $(function () {
   //NavToggle
   navToggle.on('click', function (event) {
     event.preventDefault()
-
     nav.toggleClass('active')
   })
 
