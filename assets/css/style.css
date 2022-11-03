@@ -775,6 +775,9 @@ p {
     -ms-flex-preferred-size: 100%;
     flex-basis: 100%;
   }
+  .history__item:last-child {
+    margin-bottom: 0;
+  }
 }
 @media (max-width: 767px) {
   .history__text {
