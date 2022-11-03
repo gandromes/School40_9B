@@ -764,7 +764,7 @@ p {
   border-radius: 2rem;
 }
 
-@media (max-width: 1300px) {
+@media (max-width: 1450px) {
   .history__item {
     -ms-flex-preferred-size: 50%;
     flex-basis: 50%;
