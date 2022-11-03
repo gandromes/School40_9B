@@ -166,11 +166,18 @@
                 </p>
               </figcaption>
               <div class="block__photo">
-                <img
-                  class="block__img"
-                  src="assets/images/firstBigPhoto.jpg"
-                  alt="Фото с 3 класса"
-                />
+                <picture>
+                  <source
+                    type="image/webp"
+                    class="block__img"
+                    srcset="assets/images/firstBigPhoto.webp"
+                  >
+                  <img
+                    class="block__img"
+                    src="assets/images/firstBigPhoto.jpg"
+                    alt="Фото с 3 класса"
+                  />
+                </picture>
               </div>
               <figcaption>
                 <p class="block__text">
