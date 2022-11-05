@@ -2,10 +2,15 @@
 if (!localStorage.topic) localStorage.topic = 'light'
 document.body.className = localStorage.topic
 
-swithTopic.onclick = () => {
+//swithTopic.onclick = () => {
+//  document.body.classList.toggle('dark')
+//  localStorage.topic = document.body.className || 'light'
+//}
+swithTopic.addEventListener('click', () => {
   document.body.classList.toggle('dark')
   localStorage.topic = document.body.className || 'light'
-}
+}, {passive: true}) 
+//{passive: true}
 
 $(function () {
   let intro = $('#intro'),
@@ -23,7 +28,7 @@ $(function () {
     scroll = $(this).scrollTop()
 
     scrollCheker(introH, scroll)
-  })
+  }, {passive: true})
 
   function scrollCheker(introH, scroll) {
     if (scroll > introH) {
