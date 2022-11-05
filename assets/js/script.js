@@ -1,16 +1,15 @@
 //swith topic
-if (!localStorage.topic) localStorage.topic = 'light'
-document.body.className = localStorage.topic
+if (!localStorage.topic) localStorage.topic = 'light';
+document.body.className = localStorage.topic;
 
-//swithTopic.onclick = () => {
-//  document.body.classList.toggle('dark')
-//  localStorage.topic = document.body.className || 'light'
-//}
 swithTopic.addEventListener('click', () => {
   document.body.classList.toggle('dark')
   localStorage.topic = document.body.className || 'light'
-}, {passive: true}) 
-//{passive: true}
+}, {passive: true});
+
+const lockPaddingValue =
+  window.innerWidth - document.querySelector('.wrapper').offsetWidth + 'px';
+const body = document.querySelector('body');
 
 $(function () {
   let intro = $('#intro'),
@@ -28,7 +27,7 @@ $(function () {
     scroll = $(this).scrollTop()
 
     scrollCheker(introH, scroll)
-  }, {passive: true})
+  })
 
   function scrollCheker(introH, scroll) {
     if (scroll > introH) {
@@ -85,6 +84,7 @@ $(function () {
     let modalId = $this.data('modal')
 
     $(modalId).addClass('show')
+    body.style.paddingRight = lockPaddingValue;
 
     $('body').addClass('no-scroll')
 
@@ -108,6 +108,7 @@ $(function () {
     })
 
     setTimeout(function () {
+      body.style.paddingRight = '0px'
       modalParent.removeClass('show')
       $('body').removeClass('no-scroll')
     }, 200)
@@ -121,6 +122,7 @@ $(function () {
     })
 
     setTimeout(function () {
+      body.style.paddingRight = '0px'
       $this.removeClass('show')
       $('body').removeClass('no-scroll')
     }, 200)
