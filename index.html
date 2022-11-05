@@ -873,11 +873,18 @@
               </figcaption>
 
               <div class="block__photo">
-                <img
-                  class="block__img"
-                  src="https://via.placeholder.com/1280x960"
-                  alt="Фото после 9 класса"
-                />
+                <picture >
+                  <source
+                    type="image/webp"
+                    class="block__img"
+                    srcset="assets/images/firstBigPhoto.webp"
+                  >
+                  <img
+                    class="block__img"
+                    src="assets/images/firstBigPhoto.jpg"
+                    alt="Фото после 9 класса"
+                  />
+                </picture>
               </div>
               <figcaption>
                 <p class="block__text">
