@@ -1,133 +1,174 @@
 //swith topic
-if (!localStorage.topic) localStorage.topic = 'light';
-document.body.className = localStorage.topic;
+if (!localStorage.topic) localStorage.topic = 'light'
+document.body.className = localStorage.topic
 
-swithTopic.addEventListener('click', () => {
-  document.body.classList.toggle('dark')
-  localStorage.topic = document.body.className || 'light'
-}, {passive: true});
+swithTopic.addEventListener(
+  'click',
+  () => {
+    document.body.classList.toggle('dark')
+    localStorage.topic = document.body.className || 'light'
+  },
+  { passive: true }
+)
 
 const lockPaddingValue =
-  window.innerWidth - document.querySelector('.wrapper').offsetWidth + 'px';
-const body = document.querySelector('body');
+  window.innerWidth - document.querySelector('.wrapper').offsetWidth + 'px'
+const body = document.querySelector('body')
 
-$(function () {
-  let intro = $('#intro'),
-    header = $('#header'),
-    introH = intro.innerHeight(),
-    scroll = $(window).scrollTop(),
-    navToggle = $('#navToggle'),
-    nav = $('#nav')
+const intro = document.querySelector('#intro')
+const header = document.querySelector('#header')
+let headerH = header.offsetHeight + 10
+let introH = intro.offsetHeight
+let scroll = window.pageYOffset
+const navToggle = document.querySelector('#navToggle')
+const nav = document.querySelector('#nav')
 
-  scrollCheker(introH, scroll)
+//Fixed Header
+window.onscroll = () => {
+  scroll = window.pageYOffset
+  introH = intro.offsetHeight
+  headerH = header.offsetHeight
+  scrollCheker(introH + headerH + 22, scroll - headerH)
+}
 
-  //Fixed Header
-  $(window).on('scroll resize', function () {
-    introH = intro.innerHeight()
-    scroll = $(this).scrollTop()
+//Smooth Scroll
+nav.onclick = (e) => {
+  const dataScroll = e.path[0].dataset.scroll
+  if (dataScroll) {
+    e.preventDefault()
+    let blockOffSet = document.querySelector(dataScroll).offsetTop
+    nav.classList.remove('active')
 
-    scrollCheker(introH, scroll)
-  })
-
-  function scrollCheker(introH, scroll) {
-    if (scroll > introH) {
-      $(header).addClass('fixed')
+    if (dataScroll == '#begin') {
+      window.scrollTo({
+        top: blockOffSet - headerH,
+        behavior: 'smooth',
+      })
     } else {
-      $(header).removeClass('fixed')
+      window.scrollTo({
+        top: blockOffSet - headerH * 2,
+        behavior: 'smooth',
+      })
     }
   }
+}
 
-  //Smooth Scroll
+//NavToggle
+navToggle.onclick = (event) => {
+  event.preventDefault()
+  nav.classList.toggle('active')
+}
 
-  $('[data-scroll]').on('click', function (event) {
-    event.preventDefault()
+//Modal
+const modalCall = document.querySelector('[data-modal]')
+const modalClose = document.querySelector('[data-close]')
+const modal = document.querySelector('.modal')
 
-    let blockId = $(this).data('scroll'),
-      blockOffSet = $(blockId).offset().top
+modalCall.addEventListener('click', (event) => {
+  event.preventDefault()
+  let modalId = document.querySelector(modalCall.dataset.modal)
+  modalId.showModal()
 
-    nav.removeClass('active')
+  body.style.paddingRight = lockPaddingValue
 
-    $('html , body').animate(
-      {
-        scrollTop: blockOffSet - 150,
-      },
-      750
-    )
-  })
+  body.classList.add('no-scroll')
+  nav.classList.remove('active')
 
-  //NavToggle
-  navToggle.on('click', function (event) {
-    event.preventDefault()
-    nav.toggleClass('active')
-  })
-
-  //Slider https://kenwheeler.github.io/slick/
-
-  $('[data-slider]').slick({
-    infinite: true,
-    slidesToShow: 1,
-    slidesToScroll: 1,
-    fade: false,
-    adaptiveHeight: true,
-    autoplay: true,
-    autoplaySpeed: 12000,
-  })
-
-  //Modal
-  const modalCall = $('[data-modal]')
-  const modalClose = $('[data-close]')
-
-  modalCall.on('click', function (event) {
-    event.preventDefault()
-
-    let $this = $(this)
-    let modalId = $this.data('modal')
-
-    $(modalId).addClass('show')
-    body.style.paddingRight = lockPaddingValue;
-
-    $('body').addClass('no-scroll')
-
-    nav.removeClass('active')
-
-    setTimeout(function () {
-      $(modalId).find('.modal__dialog').css({
-        transform: 'rotateX(0)',
-      })
-    }, 200)
-  })
-
-  modalClose.on('click', function (event) {
-    event.preventDefault()
-
-    let $this = $(this)
-    let modalParent = $this.parents('.modal')
-
-    modalParent.find('.modal__dialog').css({
-      transform: 'rotateX(90deg)',
-    })
-
-    setTimeout(function () {
-      body.style.paddingRight = '0px'
-      modalParent.removeClass('show')
-      $('body').removeClass('no-scroll')
-    }, 200)
-  })
-
-  $('.modal').on('click', function () {
-    let $this = $(this)
-
-    $this.find('.modal__dialog').css({
-      transform: 'rotateX(90deg)',
-    })
-
-    setTimeout(function () {
-      body.style.paddingRight = '0px'
-      $this.removeClass('show')
-      $('body').removeClass('no-scroll')
-    }, 200)
-  })
-  $('.modal__dialog').on('click', function (event) {
-    event.stopPropagation()
-  })
+  setTimeout(() => {
+    modalId.childNodes[1].style.cssText = `transform: rotateX(0);`
+  }, 200)
 })
+
+modalClose.addEventListener('click', (event) => {
+  event.preventDefault()
+
+  let modalParent = modalClose.parentElement
+  modalParent.style.cssText = `transform: rotateX(90deg);`
+
+  setTimeout(() => {
+    body.style.paddingRight = '0px'
+    modalParent.parentElement.close()
+    body.classList.remove('no-scroll')
+  }, 200)
+})
+
+modal.onclick = (event) => {
+  if (!(event.path[0] == modal)) return false
+
+  const modalDialog = modal.firstElementChild
+  modalDialog.style.cssText = `transform: rotateX(90deg)`
+
+  setTimeout(() => {
+    body.style.paddingRight = '0px'
+    modal.close()
+    body.classList.remove('no-scroll')
+  }, 200)
+}
+
+//Slider - swiper
+
+new Swiper('.fullwe', {
+  navigation: {
+    prevEl: '.swiper-button-prev',
+    nextEl: '.swiper-button-next',
+  },
+  keyboard: {
+    enabled: true,
+    onlyInViewport: true,
+  },
+  autoHeight: true,
+  watchOverflow: true,
+  loop: true,
+  autoplay: {
+    delay: 25000,
+    disableOnIteraction: true,
+  },
+  speed: 800,
+  touchRatio: 0.8,
+  touchAngle: 50,
+
+  preloadImages: false,
+  lazy: {
+    loadOnTransitionStart: true,
+    loadPrevNext: true,
+  },
+
+  a11y: {
+    enabled: true,
+    prevSlideMessage: 'Вернуться к прошлому слайду',
+    nextSlideMessage: 'Показать следующий слайд',
+    firstSlideMessage: 'Это первый слайд',
+    lastSlideMessage: 'Это последний слайд',
+    paginationBulletMessage: 'Перейти к слайду {{index}}',
+    itemRoleDescriptionMessage: 'Следующие фото в слайдере',
+  },
+
+  //breakpoints: {
+  //  300: {
+
+  //  }
+  //}
+})
+
+
+//////////////////////////////////////////
+
+function scrollCheker(introH, scroll) {
+  if (scroll > introH) {
+    header.classList.add('fixed')
+  } else {
+    header.classList.remove('fixed')
+  }
+}
+
+
+
+//  $('[data-slider]').slick({
+//    infinite: true,
+//    slidesToShow: 1,
+//    slidesToScroll: 1,
+//    fade: false,
+//    adaptiveHeight: true,
+//    autoplay: true,
+//    autoplaySpeed: 12000,
+//  })

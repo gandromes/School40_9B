@@ -536,6 +536,23 @@ p {
   padding: 4rem 0;
 }
 
+.fullwe .swiper-buttons::after {
+  color: var(--blue-medium);
+  font-weight: 500;
+  font-size: 80px;
+}
+
+.fullwe .swiper-pagination {
+  bottom: 0;
+}
+
+.fullwe .swiper-pagination-bullet {
+  width: 20px;
+  height: 20px;
+  font-size: 14px;
+  background-color: var(--blue-dark);
+}
+
 .section__header {
   max-width: 100%;
   margin: 0 auto;
@@ -889,6 +906,7 @@ p {
 
 .fullwe__item {
   padding: 1rem 6rem;
+  display: block;
   margin: 0 auto;
 }
 
@@ -902,6 +920,7 @@ p {
   overflow: hidden;
 }
 .fullwe__photo img {
+  display: block;
   width: 100%;
   height: auto;
 }
@@ -984,72 +1003,30 @@ p {
     padding: 0 0.95rem;
   }
 }
-.slick-arrow {
-  display: block;
-  font-size: 0;
-  color: transparent;
-  background: none;
-  cursor: pointer;
-  position: absolute;
-  z-index: 1;
-  top: 50%;
-  -webkit-transform: translateY(-50%);
-  transform: translateY(-50%);
-}
 
-.slick-arrow:focus {
+.fullwe .swiper-buttons:focus{
   outline: none;
 }
 
-.slick-arrow:focus-visible {
-  box-shadow: inset 0 0 10px 4px var(--blue-dark);
+.fullwe .swiper-button-prev:focus-visible::after {
+  text-shadow: .3rem 0 .6rem var(--black);
 }
 
-.slick-current:focus-visible .fullwe__photo {
-  box-shadow: 0 0 10px 5px var(--blue-dark);
-}
-
-.slick-arrow::after {
-  content: '';
-  display: block;
-  height: 2.2rem;
-  width: 2.2rem;
-  border-top: 0.5rem solid var(--blue-dark);
-  border-left: 0.5rem solid var(--blue-dark);
-}
-
-.slick-prev {
-  left: 0;
-  -webkit-transform: rotate(-45deg);
-  transform: rotate(-45deg);
-}
-
-.slick-next {
-  right: 0;
-  -webkit-transform: rotate(135deg);
-  transform: rotate(135deg);
+.fullwe .swiper-button-next:focus-visible::after {
+  text-shadow: -.3rem 0 .6rem var(--black);
 }
 
 @media (max-width: 992px) {
-  .slick-arrow::after {
-    height: 2.1rem;
-    width: 2.1rem;
-    border-top-width: 0.4rem;
-    border-left-width: 0.4rem;
+  .fullwe .swiper-buttons::after {
+    font-size: 60px;
   }
 }
 @media (max-width: 767px) {
-  .slick-arrow::after {
-    height: 2rem;
-    width: 2rem;
-    border-top-width: 0.33rem;
-    border-left-width: 0.33rem;
-  }
+  
 }
 @media (max-width: 576px) {
-  .slick-arrow {
-    top: 103.33%;
-    margin: 0 3rem;
+  .swiper-button-next, .swiper-button-prev {
+    top: 98%;
   }
 }
 .burger {
@@ -1292,6 +1269,8 @@ p {
 }
 .modal {
   display: none;
+  max-width: 100%;
+  max-height: 100%;
   width: 100%;
   height: 100%;
   padding: 1rem;
@@ -1302,7 +1281,7 @@ p {
   left: 0;
   z-index: 10000;
 }
-.modal.show {
+.modal[open] {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;

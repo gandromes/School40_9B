@@ -12,7 +12,6 @@
       content="Школа 40, Школа в городе Тольятти, Ученики школы 40, 9б класс школы 40, МБУ школа 40, Единство непохожих, Официальный сайт МБУ Школа № 40 городского округа Тольятти"
     />
     <link rel="icon" href="assets/images/icon.jpg" />
-    <link rel="stylesheet" href="assets/css/style.css" />
     <meta
       name="viewport"
       content="width=device-width , initial-scale=1"
@@ -57,7 +56,8 @@
     </style>
     <meta name="author" content="Рома. Р & Никита. С" />
     <meta name="copyright" content="Р.Н. Компани" />
-    <link rel="stylesheet" href="libs/slick/slick.css" />
+    <link rel="stylesheet" href="libs/swiper/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="assets/css/style.css" />
   </head>
   <body>
     <div class="wrapper">
@@ -75,7 +75,6 @@
                 <picture>
                   <source
                     type="image/webp"
-                    data-scroll="#intro"
                     class="autor__avatar-photo"
                     srcset="assets/images/AvatarOnHeader.webp"
                   />
@@ -487,20 +486,23 @@
               <h2 class="section__title">Все мы</h2>
             </div>
 
-            <div class="fullwe">
-              <div data-slider>
-                <div>
-                  <article class="fullwe__item">
+            <div class="fullwe swiper">
+              <div class="swiper-wrapper">
+
+                <div class="swiper-slide">
+                  <article class="fullwe__item ">
                     <div class="fullwe__photo">
                       <picture>
                         <source
                           type="image/webp"
-                          class="img"
-                          srcset="assets/images/sliderFullMe/RomaRomanov.webp"
+                          class="img swiper-lazy"
+                          data-srcset="assets/images/sliderFullMe/RomaRomanov.webp"
+                          srcset="assets/images/1x1.png"
                         />
                         <img
-                          class="img"
-                          src="assets/images/sliderFullMe/RomaRomanov.jpg"
+                          class="img swiper-lazy"
+                          data-src="assets/images/sliderFullMe/RomaRomanov.jpg"
+                          src="assets/images/1x1.png"
                           alt="Рома Черепьянов"
                         />
                       </picture>
@@ -510,18 +512,20 @@
                     </div>
                   </article>
                 </div>
-                <div>
+                <div class="swiper-slide">
                   <article class="fullwe__item">
                     <div class="fullwe__photo">
                       <picture>
                         <source
                           type="image/webp"
-                          class="img"
-                          srcset="assets/images/sliderFullMe/Nikita.webp"
+                          class="img swiper-lazy"
+                          data-srcset="assets/images/sliderFullMe/Nikita.webp"
+                          srcset="assets/images/1x1.png"
                         />
                         <img
-                          class="img"
-                          src="assets/images/sliderFullMe/Nikita.jpg"
+                          class="img swiper-lazy"
+                          data-src="assets/images/sliderFullMe/Nikita.jpg"
+                          src="assets/images/1x1.png"
                           alt="Рома Черепьянов"
                         />
                       </picture>
@@ -531,18 +535,20 @@
                     </div>
                   </article>
                 </div>
-                <div>
+                <div class="swiper-slide">
                   <article class="fullwe__item">
                     <div class="fullwe__photo">
                       <picture>
                         <source
                           type="image/webp"
-                          class="img"
-                          srcset="assets/images/sliderFullMe/Miha.webp"
+                          class="img swiper-lazy"
+                          data-srcset="assets/images/sliderFullMe/Miha.webp"
+                          srcset="assets/images/1x1.png"
                         />
                         <img
-                          class="img"
-                          src="assets/images/sliderFullMe/Miha.jpg"
+                          class="img swiper-lazy"
+                          src="assets/images/1x1.png"
+                          data-src="assets/images/sliderFullMe/Miha.jpg"
                           alt="Михаил Котюсов"
                         />
                       </picture>
@@ -552,18 +558,20 @@
                     </div>
                   </article>
                 </div>
-                <div>
+                <div class="swiper-slide">
                   <article class="fullwe__item">
                     <div class="fullwe__photo">
                       <picture>
                         <source
                           type="image/webp"
-                          class="img"
-                          srcset="assets/images/sliderFullMe/JeniaKrasicov.webp"
+                          class="img swiper-lazy"
+                          data-srcset="assets/images/sliderFullMe/JeniaKrasicov.webp"
+                          srcset="assets/images/1x1.png"
                         />
                         <img
-                          class="img"
-                          src="assets/images/sliderFullMe/JeniaKrasicov.jpg"
+                          class="img swiper-lazy"
+                          data-src="assets/images/sliderFullMe/JeniaKrasicov.jpg"
+                          src="assets/images/1x1.png"
                           alt="Женя Красиков"
                         />
                       </picture>
@@ -573,20 +581,22 @@
                     </div>
                   </article>
                 </div>
-                <div>
+                <div class="swiper-slide">
                   <article class="fullwe__item">
                     <div class="fullwe__photo">
                       <picture>
                         <source
                           type="image/webp"
-                          class="img"
-                          srcset="
+                          class="img swiper-lazy"
+                          data-srcset="
                             assets/images/sliderFullMe/AngelinaIgnatova.webp
                           "
+                          srcset="assets/images/1x1.png"
                         />
                         <img
-                          class="img"
-                          src="assets/images/sliderFullMe/AngelinaIgnatova.jpg"
+                          class="img swiper-lazy"
+                          src="assets/images/1x1.png"
+                          data-src="assets/images/sliderFullMe/AngelinaIgnatova.jpg"
                           alt="Ангелина Игнатова"
                         />
                       </picture>
@@ -596,18 +606,20 @@
                     </div>
                   </article>
                 </div>
-                <div>
+                <div class="swiper-slide">
                   <article class="fullwe__item">
                     <div class="fullwe__photo">
                       <picture>
                         <source
                           type="image/webp"
-                          class="img"
-                          srcset="assets/images/sliderFullMe/Vlada.webp"
+                          class="img swiper-lazy"
+                          srcset="assets/images/1x1.png"
+                          data-srcset="assets/images/sliderFullMe/Vlada.webp"
                         />
                         <img
-                          class="img"
-                          src="assets/images/sliderFullMe/Vlada.jpg"
+                          class="img swiper-lazy"
+                          src="assets/images/1x1.png"
+                          data-src="assets/images/sliderFullMe/Vlada.jpg"
                           alt="Владислава Советникова"
                         />
                       </picture>
@@ -619,18 +631,20 @@
                     </div>
                   </article>
                 </div>
-                <div>
+                <div class="swiper-slide">
                   <article class="fullwe__item">
                     <div class="fullwe__photo">
                       <picture>
                         <source
                           type="image/webp"
-                          class="img"
-                          srcset="assets/images/sliderFullMe/irak.webp"
+                          class="img swiper-lazy"
+                          srcset="assets/images/1x1.png"
+                          data-srcset="assets/images/sliderFullMe/irak.webp"
                         />
                         <img
-                          class="img"
-                          src="assets/images/sliderFullMe/irak.jpg"
+                          class="img swiper-lazy"
+                          src="assets/images/1x1.png"
+                          data-src="assets/images/sliderFullMe/irak.jpg"
                           alt="Ахалая Иракли"
                         />
                       </picture>
@@ -640,18 +654,20 @@
                     </div>
                   </article>
                 </div>
-                <div>
+                <div class="swiper-slide">
                   <article class="fullwe__item">
                     <div class="fullwe__photo">
                       <picture>
                         <source
                           type="image/webp"
-                          class="img"
-                          srcset="assets/images/sliderFullMe/Milana.webp"
+                          class="img swiper-lazy"
+                          srcset="assets/images/1x1.png"
+                          data-srcset="assets/images/sliderFullMe/Milana.webp"
                         />
                         <img
-                          class="img"
-                          src="assets/images/sliderFullMe/Milana.jpg"
+                          class="img swiper-lazy"
+                          src="assets/images/1x1.png"
+                          data-src="assets/images/sliderFullMe/Milana.jpg"
                           alt="Савина Милана"
                         />
                       </picture>
@@ -661,18 +677,20 @@
                     </div>
                   </article>
                 </div>
-                <div>
+                <div class="swiper-slide">
                   <article class="fullwe__item">
                     <div class="fullwe__photo">
                       <picture>
                         <source
                           type="image/webp"
-                          class="img"
-                          srcset="assets/images/sliderFullMe/Korunova.webp"
+                          class="img swiper-lazy"
+                          data-srcset="assets/images/sliderFullMe/Korunova.webp"
+                          srcset="assets/images/1x1.png"
                         />
                         <img
-                          class="img"
-                          src="assets/images/sliderFullMe/Korunova.jpg"
+                          class="img swiper-lazy"
+                          data-src="assets/images/sliderFullMe/Korunova.jpg"
+                          src="assets/images/1x1.png"
                           alt="Екатерина Корунова"
                         />
                       </picture>
@@ -682,18 +700,20 @@
                     </div>
                   </article>
                 </div>
-                <div>
+                <div class="swiper-slide">
                   <article class="fullwe__item">
                     <div class="fullwe__photo">
                       <picture>
                         <source
                           type="image/webp"
-                          class="img"
-                          srcset="assets/images/sliderFullMe/Lapin.webp"
+                          class="img swiper-lazy"
+                          srcset="assets/images/1x1.png"
+                          data-srcset="assets/images/sliderFullMe/Lapin.webp"
                         />
                         <img
-                          class="img"
-                          src="assets/images/sliderFullMe/Lapin.jpg"
+                          src="assets/images/1x1.png"
+                          class="img swiper-lazy"
+                          data-src="assets/images/sliderFullMe/Lapin.jpg"
                           alt="Лапин Арсений"
                         />
                       </picture>
@@ -703,18 +723,20 @@
                     </div>
                   </article>
                 </div>
-                <div>
+                <div class="swiper-slide">
                   <article class="fullwe__item">
                     <div class="fullwe__photo">
                       <picture>
                         <source
                           type="image/webp"
-                          class="img"
-                          srcset="assets/images/sliderFullMe/David.webp"
+                          class="img swiper-lazy"
+                          srcset="assets/images/1x1.png"
+                          data-srcset="assets/images/sliderFullMe/David.webp"
                         />
                         <img
-                          class="img"
-                          src="assets/images/sliderFullMe/David.jpg"
+                          class="img swiper-lazy"
+                          src="assets/images/1x1.png"
+                          data-src="assets/images/sliderFullMe/David.jpg"
                           alt="Кириллов Давид"
                         />
                       </picture>
@@ -724,18 +746,20 @@
                     </div>
                   </article>
                 </div>
-                <div>
+                <div class="swiper-slide">
                   <article class="fullwe__item">
                     <div class="fullwe__photo">
                       <picture>
                         <source
                           type="image/webp"
-                          class="img"
-                          srcset="assets/images/sliderFullMe/Malich.webp"
+                          class="img swiper-lazy"
+                          data-srcset="assets/images/sliderFullMe/Malich.webp"
+                          srcset="assets/images/1x1.png"
                         />
                         <img
-                          class="img"
-                          src="assets/images/sliderFullMe/Malich.jpg"
+                          class="img swiper-lazy"
+                          data-src="assets/images/sliderFullMe/Malich.jpg"
+                          src="assets/images/1x1.png"
                           alt="Настя Малич"
                         />
                       </picture>
@@ -745,18 +769,20 @@
                     </div>
                   </article>
                 </div>
-                <div>
+                <div class="swiper-slide">
                   <article class="fullwe__item">
                     <div class="fullwe__photo">
                       <picture>
                         <source
                           type="image/webp"
-                          class="img"
-                          srcset="assets/images/sliderFullMe/Meks.webp"
+                          class="img swiper-lazy"
+                          data-srcset="assets/images/sliderFullMe/Meks.webp"
+                          srcset="assets/images/1x1.png"
                         />
                         <img
-                          class="img"
-                          src="assets/images/sliderFullMe/Meks.jpg"
+                          class="img swiper-lazy"
+                          data-src="assets/images/sliderFullMe/Meks.jpg"
+                          src="assets/images/1x1.png"
                           alt="Кищенко Максим"
                         />
                       </picture>
@@ -766,18 +792,20 @@
                     </div>
                   </article>
                 </div>
-                <div>
+                <div class="swiper-slide">
                   <article class="fullwe__item">
                     <div class="fullwe__photo">
                       <picture>
                         <source
                           type="image/webp"
-                          class="img"
-                          srcset="assets/images/sliderFullMe/izum.webp"
+                          class="img swiper-lazy"
+                          srcset="assets/images/1x1.png"
+                          data-srcset="assets/images/sliderFullMe/izum.webp"
                         />
                         <img
-                          class="img"
-                          src="assets/images/sliderFullMe/izum.jpg"
+                          class="img swiper-lazy"
+                          src="assets/images/1x1.png"
+                          data-src="assets/images/sliderFullMe/izum.jpg"
                           alt="Илья Алубаев"
                         />
                       </picture>
@@ -787,18 +815,20 @@
                     </div>
                   </article>
                 </div>
-                <div>
+                <div class="swiper-slide">
                   <article class="fullwe__item">
                     <div class="fullwe__photo">
                       <picture>
                         <source
                           type="image/webp"
-                          class="img"
-                          srcset="assets/images/sliderFullMe/Zlata.webp"
+                          class="img swiper-lazy"
+                          data-srcset="assets/images/sliderFullMe/Zlata.webp"
+                          srcset="assets/images/1x1.png"
                         />
                         <img
-                          class="img"
-                          src="assets/images/sliderFullMe/Zlata.jpg"
+                          class="img swiper-lazy"
+                          src="assets/images/1x1.png"
+                          data-src="assets/images/sliderFullMe/Zlata.jpg"
                           alt="Злата Грачева"
                         />
                       </picture>
@@ -808,18 +838,20 @@
                     </div>
                   </article>
                 </div>
-                <div>
+                <div class="swiper-slide">
                   <article class="fullwe__item">
                     <div class="fullwe__photo">
                       <picture>
                         <source
                           type="image/webp"
-                          class="img"
-                          srcset="assets/images/sliderFullMe/Barbara.webp"
+                          class="img swiper-lazy"
+                          data-srcset="assets/images/sliderFullMe/Barbara.webp"
+                          srcset="assets/images/1x1.png"
                         />
                         <img
-                          class="img"
-                          src="assets/images/sliderFullMe/Barbara.jpg"
+                          class="img swiper-lazy"
+                          data-src="assets/images/sliderFullMe/Barbara.jpg"
+                          src="assets/images/1x1.png"
                           alt="Александр Барбунц"
                         />
                       </picture>
@@ -829,18 +861,20 @@
                     </div>
                   </article>
                 </div>
-                <div>
+                <div class="swiper-slide">
                   <article class="fullwe__item">
                     <div class="fullwe__photo">
                       <picture>
                         <source
                           type="image/webp"
-                          class="img"
-                          srcset="assets/images/sliderFullMe/Supra.webp"
+                          class="img swiper-lazy"
+                          data-srcset="assets/images/sliderFullMe/Supra.webp"
+                          srcset="assets/images/1x1.png"
                         />
                         <img
-                          class="img"
-                          src="assets/images/sliderFullMe/Supra.jpg"
+                          class="img swiper-lazy"
+                          data-srcset="assets/images/sliderFullMe/Supra.jpg"
+                          src="assets/images/1x1.png"
                           alt="Александр Супрунов"
                         />
                       </picture>
@@ -850,7 +884,11 @@
                     </div>
                   </article>
                 </div>
+
               </div>
+              <div class="swiper-button-prev swiper-buttons"></div>
+              <div class="swiper-button-next swiper-buttons"></div>
+              <div class="swiper-pagination"></div>
             </div>
           </div>
         </section>
@@ -1009,8 +1047,7 @@
       </dialog>
     </div>
 
-    <script src="libs/jquery.min.js"></script>
-    <script src="libs/slick/slick.min.js"></script>
+    <script src="libs/swiper/swiper-bundle.min.js"></script>
     <script src="assets/js/script.js"></script>
   </body>
 </html>
