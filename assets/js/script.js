@@ -145,7 +145,6 @@ new Swiper('.fullwe', {
 
   //breakpoints: {
   //  300: {
-
   //  }
   //}
 })
@@ -160,15 +159,3 @@ function scrollCheker(introH, scroll) {
     header.classList.remove('fixed')
   }
 }
-
-
-
-//  $('[data-slider]').slick({
-//    infinite: true,
-//    slidesToShow: 1,
-//    slidesToScroll: 1,
-//    fade: false,
-//    adaptiveHeight: true,
-//    autoplay: true,
-//    autoplaySpeed: 12000,
-//  })
