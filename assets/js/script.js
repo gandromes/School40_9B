@@ -153,9 +153,6 @@ new Swiper('.fullwe', {
   //}
 })
 
-
-//////////////////////////////////////////
-
 function scrollCheker(introH, scroll) {
   if (scroll > introH) {
     header.classList.add('fixed')
