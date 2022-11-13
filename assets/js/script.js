@@ -69,7 +69,9 @@ modalCall.addEventListener('click', (event) => {
   let modalId = document.querySelector(modalCall.dataset.modal)
   modalId.showModal()
 
-  body.style.paddingRight = lockPaddingValue
+  body.style.paddingRight = lockPaddingValue;
+  header.className.includes('fixed') &&
+    (header.style.paddingRight = lockPaddingValue)
 
   body.classList.add('no-scroll')
   nav.classList.remove('active')
@@ -87,6 +89,7 @@ modalClose.addEventListener('click', (event) => {
 
   setTimeout(() => {
     body.style.paddingRight = '0px'
+    header.className.includes('fixed') && (header.style.paddingRight = '0px')
     modalParent.parentElement.close()
     body.classList.remove('no-scroll')
   }, 200)
@@ -100,6 +103,7 @@ modal.onclick = (event) => {
 
   setTimeout(() => {
     body.style.paddingRight = '0px'
+    header.className.includes('fixed') && (header.style.paddingRight = '0px')
     modal.close()
     body.classList.remove('no-scroll')
   }, 200)
