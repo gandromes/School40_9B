@@ -69,7 +69,7 @@ modalCall.addEventListener('click', (event) => {
   let modalId = document.querySelector(modalCall.dataset.modal)
   modalId.showModal()
 
-  body.style.paddingRight = lockPaddingValue;
+  body.style.paddingRight = lockPaddingValue
   header.className.includes('fixed') &&
     (header.style.paddingRight = lockPaddingValue)
 
