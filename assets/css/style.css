@@ -993,16 +993,16 @@ p {
   }
 }
 
-.fullwe .swiper-buttons:focus{
+.fullwe .swiper-buttons:focus {
   outline: none;
 }
 
 .fullwe .swiper-button-prev:focus-visible::after {
-  text-shadow: .3rem 0 .6rem var(--black);
+  text-shadow: 0.3rem 0 0.6rem var(--black);
 }
 
 .fullwe .swiper-button-next:focus-visible::after {
-  text-shadow: -.3rem 0 .6rem var(--black);
+  text-shadow: -0.3rem 0 0.6rem var(--black);
 }
 
 @media (max-width: 992px) {
@@ -1032,7 +1032,7 @@ p {
     right: 10%;
   }
 }
-@media (max-width: 414px){
+@media (max-width: 414px) {
   .swiper-button-prev {
     right: auto;
     left: 15%;
