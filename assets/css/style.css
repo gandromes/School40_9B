@@ -929,7 +929,7 @@ p {
   font-style: normal;
   font-weight: 400;
   font-size: 2rem;
-  color: var(--white);
+  color: rgb(41, 41, 41);
 }
 
 @media (min-width: 1100px) {
