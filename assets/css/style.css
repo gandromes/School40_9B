@@ -601,10 +601,6 @@ p {
   .section {
     margin: 6rem 0;
   }
-  .swiper-wrapper {
-    padding: 3rem 0;
-  }
-
   .section__title {
     font-size: 2.5rem;
     margin-bottom: 5rem;
@@ -620,7 +616,6 @@ p {
   .swiper-wrapper {
     padding-bottom: 4rem;
   }
-
   .section__title {
     font-size: 2.2rem;
     margin-bottom: 4rem;
@@ -632,9 +627,6 @@ p {
 @media (max-width: 414px) {
   .section {
     margin: 4.5rem 0;
-  }
-  .swiper-wrapper {
-    padding: 1.5rem 0 3rem 0;
   }
 
   .section__title {
@@ -900,9 +892,6 @@ p {
     padding: 0;
   }
 }
-.fullwe {
-  margin-bottom: 2rem;
-}
 
 .fullwe__item {
   padding: 1rem 6rem;
@@ -1023,12 +1012,34 @@ p {
 }
 @media (max-width: 767px) {
   .fullwe .swiper-buttons::after {
-    font-size: 50px;
+    font-size: 55px;
   }
 }
 @media (max-width: 576px) {
-  .swiper-button-next, .swiper-button-prev {
-    top: 100%;
+  .swiper-buttons {
+    top: auto;
+    bottom: 1%;
+  }
+  .fullwe .swiper-buttons::after {
+    font-weight: 500;
+  }
+  .swiper-button-prev {
+    right: auto;
+    left: 10%;
+  }
+  .swiper-button-next {
+    left: auto;
+    right: 10%;
+  }
+}
+@media (max-width: 414px){
+  .swiper-button-prev {
+    right: auto;
+    left: 15%;
+  }
+  .swiper-button-next {
+    right: 15%;
+    left: auto;
   }
 }
 .burger {
