@@ -925,6 +925,10 @@ p {
   border-radius: 0 2rem 2rem 0;
 }
 
+body.dark .fullwe__initials {
+  color: white;
+}
+
 .fullwe__initials {
   font-style: normal;
   font-weight: 400;
