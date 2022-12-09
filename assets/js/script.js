@@ -1,3 +1,15 @@
+//Toggle topic(theme)
+localStorage.topic || (localStorage.topic = 'light'),
+  (document.body.className = localStorage.topic),
+  swithTopic.addEventListener(
+    'click',
+    () => {
+      document.body.classList.toggle('dark'),
+        (localStorage.topic = document.body.className || 'light')
+    },
+    { passive: !0 }
+  )
+
 const lockPaddingValue = window.innerWidth - document.querySelector('.wrapper').offsetWidth + 'px',
                          body = document.querySelector('body'),
                          intro = document.querySelector('#intro'),
