@@ -1,70 +1,71 @@
 //Toggle topic(theme)
-localStorage.topic || (localStorage.topic = 'light'),
-  (document.body.className = localStorage.topic),
-  swithTopic.addEventListener(
-    'click',
-    () => {
-      document.body.classList.toggle('dark'),
-        (localStorage.topic = document.body.className || 'light')
-    },
-    { passive: !0 }
-  )
+localStorage.topic || (localStorage.topic = 'light')
+document.body.className = localStorage.topic
+swithTopic.addEventListener(
+  'click',
+  () => {
+    document.body.classList.toggle('dark'),
+      (localStorage.topic = document.body.className || 'light')
+  },
+  { passive: !0 }
+)
 
-const lockPaddingValue = window.innerWidth - document.querySelector('.wrapper').offsetWidth + 'px',
-                         body = document.querySelector('body'),
-                         intro = document.querySelector('#intro'),
-                         header = document.querySelector('#header'),
-                         navToggle = document.querySelector('#navToggle'),
-                         nav = document.querySelector('#nav')
+const lockPaddingValue =
+    window.innerWidth - document.querySelector('.wrapper').offsetWidth + 'px',
+  body = document.querySelector('body'),
+  intro = document.querySelector('#intro'),
+  header = document.querySelector('#header'),
+  navToggle = document.querySelector('#navToggle'),
+  nav = document.querySelector('#nav')
 let headerH = header.offsetHeight + 10,
-              introH = intro.offsetHeight,
-              scroll = window.pageYOffset
+  introH = intro.offsetHeight,
+  scroll = window.pageYOffset
 
 //Helpers -> start
-const scrollCheker = (e, t) => t > e ? header.classList.add('fixed') : header.classList.remove('fixed')
-const isEventTargetNotEqual = (event, target) => event.target != target ? !0 : !1
+const scrollCheker = (e, t) =>
+  t > e ? header.classList.add('fixed') : header.classList.remove('fixed')
+const isEventTargetNotEqual = (event, target) =>
+  event.target != target ? !0 : !1
 //end
 
 //Update data
-;;(window.onscroll = () => {
+;(window.onscroll = () => {
   ;(scroll = window.pageYOffset),
     (introH = intro.offsetHeight),
     (headerH = header.offsetHeight),
     scrollCheker(introH + headerH + 22, scroll - headerH)
 }),
-
-//Fixed Header
-(window.onscroll = () => {
-  scroll = window.pageYOffset
-  introH = intro.offsetHeight
-  headerH = header.offsetHeight
-  scrollCheker(introH + headerH + 22, scroll - headerH)
-})
-
-//Smooth ScrollTo
-(nav.onclick = (e) => {
-  const t = e.target.dataset.scroll
-  if (t) {
-    e.preventDefault()
-    let o = document.querySelector(t).offsetTop
-    nav.classList.remove('active'),
-      '#begin' == t
-        ? window.scrollTo({ top: o - headerH, behavior: 'smooth' })
-        : window.scrollTo({ top: o - 2 * headerH, behavior: 'smooth' })
-  }
-}),
-
-//Toggle nav menu
-(navToggle.onclick = (e) => {
-  e.preventDefault(), nav.classList.toggle('active')
-})
+  //Fixed Header
+  (window.onscroll = () => {
+    scroll = window.pageYOffset
+    introH = intro.offsetHeight
+    headerH = header.offsetHeight
+    scrollCheker(introH + headerH + 22, scroll - headerH)
+  })(
+    //Smooth ScrollTo
+    (nav.onclick = (e) => {
+      const t = e.target.dataset.scroll
+      if (t) {
+        e.preventDefault()
+        let o = document.querySelector(t).offsetTop
+        nav.classList.remove('active'),
+          '#begin' == t
+            ? window.scrollTo({ top: o - headerH, behavior: 'smooth' })
+            : window.scrollTo({ top: o - 2 * headerH, behavior: 'smooth' })
+      }
+    })
+  ),
+  //Toggle nav menu
+  (navToggle.onclick = (e) => {
+    e.preventDefault(), nav.classList.toggle('active')
+  })
 
 //Modal:
 
 //Modal values
 const modalCall = document.querySelector('[data-modal]'),
-      modalClose = document.querySelector('[data-close]'),
-      modal = document.querySelector('.modal')
+  modalClose = document.querySelector('[data-close]'),
+  modal = document.querySelector('.modal')
 
 //Modal open
 modalCall.addEventListener('click', (event) => {
