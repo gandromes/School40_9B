@@ -87,7 +87,11 @@ modalCall.addEventListener('click', (event) => {
 
 //Modal close
 modal.onclick = (event) => {
-  if (isEventTargetNotEqual(event, modal)) return !1
+  if (
+    isEventTargetNotEqual(event, modal) ||
+    isEventTargetNotEqual(event, firstSitelink)
+  )
+    return !1
 
   const modalDialog = modal.firstElementChild
   modalDialog.style.cssText = `transform: rotateX(90deg)`
