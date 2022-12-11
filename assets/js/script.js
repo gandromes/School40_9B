@@ -89,7 +89,7 @@ modalCall.addEventListener('click', (event) => {
 modal.onclick = (event) => {
   if (
     isEventTargetNotEqual(event, modal) ||
-    isEventTargetNotEqual(event, firstSitelink)
+    !isEventTargetNotEqual(event, firstSitelink)
   )
     return !1
 
