@@ -11,7 +11,7 @@ swithTopic.addEventListener(
 )
 
 const lockPaddingValue =
-    window.innerWidth - document.querySelector('.wrapper').offsetWidth + 'px',
+  window.innerWidth - document.querySelector('.wrapper').offsetWidth + 'px',
   body = document.querySelector('body'),
   intro = document.querySelector('#intro'),
   header = document.querySelector('#header'),
@@ -26,39 +26,39 @@ const scrollCheker = (e, t) =>
   t > e ? header.classList.add('fixed') : header.classList.remove('fixed')
 const isEventTargetNotEqual = (event, target) =>
   event.target != target ? !0 : !1
-//end
+  //end
 
-//Update data
-;(window.onscroll = () => {
-  ;(scroll = window.pageYOffset),
-    (introH = intro.offsetHeight),
-    (headerH = header.offsetHeight),
-    scrollCheker(introH + headerH + 22, scroll - headerH)
-}),
-  //Fixed Header
-  (window.onscroll = () => {
-    scroll = window.pageYOffset
-    introH = intro.offsetHeight
-    headerH = header.offsetHeight
-    scrollCheker(introH + headerH + 22, scroll - headerH)
-  })(
-    //Smooth ScrollTo
-    (nav.onclick = (e) => {
-      const t = e.target.dataset.scroll
-      if (t) {
-        e.preventDefault()
-        let o = document.querySelector(t).offsetTop
-        nav.classList.remove('active'),
-          '#begin' == t
-            ? window.scrollTo({ top: o - headerH, behavior: 'smooth' })
-            : window.scrollTo({ top: o - 2 * headerH, behavior: 'smooth' })
-      }
+  //Update data
+  ; (window.onscroll = () => {
+    ; (scroll = window.pageYOffset),
+      (introH = intro.offsetHeight),
+      (headerH = header.offsetHeight),
+      scrollCheker(introH + headerH + 22, scroll - headerH)
+  }),
+    //Fixed Header
+    (window.onscroll = () => {
+      scroll = window.pageYOffset
+      introH = intro.offsetHeight
+      headerH = header.offsetHeight
+      scrollCheker(introH + headerH + 22, scroll - headerH)
+    })(
+      //Smooth ScrollTo
+      (nav.onclick = (e) => {
+        const t = e.target.dataset.scroll
+        if (t) {
+          e.preventDefault()
+          let o = document.querySelector(t).offsetTop
+          nav.classList.remove('active'),
+            '#begin' == t
+              ? window.scrollTo({ top: o - headerH, behavior: 'smooth' })
+              : window.scrollTo({ top: o - 2 * headerH, behavior: 'smooth' })
+        }
+      })
+    ),
+    //Toggle nav menu
+    (navToggle.onclick = (e) => {
+      e.preventDefault(), nav.classList.toggle('active')
     })
-  ),
-  //Toggle nav menu
-  (navToggle.onclick = (e) => {
-    e.preventDefault(), nav.classList.toggle('active')
-  })
 
 //Modal:
 
@@ -87,15 +87,10 @@ modalCall.addEventListener('click', (event) => {
 
 //Modal close
 modal.onclick = (event) => {
-  if (
-    isEventTargetNotEqual(event, modal) ||
-    !isEventTargetNotEqual(event, firstSitelink)
-  )
-    return !1
 
-  const modalDialog = modal.firstElementChild
-  modalDialog.style.cssText = `transform: rotateX(90deg)`
+  if (isEventTargetNotEqual(event, modal)) return !1 || !isEventTargetNotEqual(event, firstSitelink)
 
+  modal.firstElementChild.style.cssText = `transform: rotateX(90deg)`
   setTimeout(() => {
     body.style.paddingRight = '0px'
     header.className.includes('fixed') && (header.style.paddingRight = '0px')
