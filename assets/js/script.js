@@ -7,7 +7,7 @@ swithTopic.addEventListener(
     document.body.classList.toggle('dark'),
       (localStorage.topic = document.body.className || 'light')
   },
-  { passive: !0 }
+  { passive: true }
 )
 
 const lockPaddingValue =
@@ -25,7 +25,7 @@ let headerH = header.offsetHeight + 10,
 const scrollCheker = (e, t) =>
   t > e ? header.classList.add('fixed') : header.classList.remove('fixed')
 const isEventTargetNotEqual = (event, target) =>
-  event.target != target ? !0 : !1
+  event.target != target ? true : false
   //end
 
   //Update data
@@ -88,7 +88,7 @@ modalCall.addEventListener('click', (event) => {
 //Modal close
 modal.onclick = (event) => {
 
-  if (isEventTargetNotEqual(event, modal)) return !1 || !isEventTargetNotEqual(event, firstSitelink)
+  if (isEventTargetNotEqual(event, modal)) return false || !isEventTargetNotEqual(event, firstSitelink)
 
   modal.firstElementChild.style.cssText = `transform: rotateX(90deg)`
   setTimeout(() => {
@@ -120,18 +120,18 @@ new Swiper('.fullwe', {
     prevEl: '.swiper-button-prev',
     nextEl: '.swiper-button-next',
   },
-  keyboard: { enabled: !0, onlyInViewport: !0 },
-  autoHeight: !0,
-  watchOverflow: !0,
-  loop: !0,
-  autoplay: { delay: 25e3, disableOnIteraction: !0 },
+  keyboard: { enabled: true, onlyInViewport: true },
+  autoHeight: true,
+  watchOverflow: true,
+  loop: true,
+  autoplay: { delay: 25e3, disableOnIteraction: true },
   speed: 8e2,
   touchRatio: 0.8,
   touchAngle: 50,
-  preloadImages: !1,
-  lazy: { loadOnTransitionStart: !0, loadPrevNext: !0 },
+  preloadImages: false,
+  lazy: { loadOnTransitionStart: true, loadPrevNext: true },
   a11y: {
-    enabled: !0,
+    enabled: true,
     prevSlideMessage: 'Вернуться к прошлому слайду',
     nextSlideMessage: 'Показать следующий слайд',
     firstSlideMessage: 'Это первый слайд',
