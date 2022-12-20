@@ -353,7 +353,6 @@ p {
         font-size: 0.9rem;
     }
     .nav .nav__link--btn {
-        margin-bottom: 1rem;
         margin-left: 0;
         padding: 0.7rem 7rem;
     }
@@ -1284,4 +1283,10 @@ body.dark .modal {
     .modal__text {
         font-size: 1.07rem;
     }
+}
+
+@media (max-width: 244px){
+  .autor__content {
+    display: none;
+  }
 }
