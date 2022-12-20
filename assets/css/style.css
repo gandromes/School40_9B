@@ -1378,4 +1378,13 @@ body.dark .modal {
   .footer__person:not(:last-child) {
     margin-bottom: 0rem;
   }
+  .modal__title {
+    font-size: 2rem;
+  }
+  .modal__image {
+    width: 82%;
+  }
+  .modal__text {
+    font-size: .8rem;
+  }
 }
