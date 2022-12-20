@@ -2,7 +2,7 @@ RewriteEngine On
 RewriteRule ^index\.html$ / [R=301,L]
 RewriteRule ^(.*)/index\.html$ /$1/ [R=301,L]
 
-<filesMatch ".(jpg|jpeg|png|gif|ico)$">
+<filesMatch ".(jpg|jpeg|png|gif|ico|webp)$">
 Header set Cache-Control "max-age=31536000, public"
 </filesMatch>
 <filesMatch ".(css|js)$">
