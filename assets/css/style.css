@@ -465,7 +465,7 @@ p {
 }
 .section--slider {
     background-color: var(--gray-blue-light);
-    padding: 4rem 0;
+    padding: 2rem 0;
 }
 .fullwe .swiper-buttons::after {
     color: var(--blue-medium);
