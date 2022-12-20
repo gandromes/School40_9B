@@ -124,7 +124,7 @@ new Swiper('.fullwe', {
   autoHeight: true,
   watchOverflow: true,
   loop: true,
-  autoplay: { delay: 28e3, disableOnIteraction: true },
+  autoplay: { delay: 27e3, disableOnIteraction: true },
   speed: 8e2,
   touchRatio: 0.8,
   touchAngle: 50,
