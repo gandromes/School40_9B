@@ -1,5 +1,5 @@
-# MBY School 40 9b <3
-![Adaptive demonstration](assets/images/AdaptiveDemonstretion.png)
+# МБУ School 40 9b <3
+[![Adaptive demonstration](assets/images/AdaptiveDemonstretion.png)](https://quickyoung.github.io/School40_9B/)
 
 # About the project:
 * This project made at the beginning of 9th grade, so that everyone who studied in my class could see their own and general photos, they can remember something etc...
@@ -19,15 +19,18 @@
 3.  **JavaScript**
 
 ## Implemented:
-* [x] Scroll Menu
-* [x] Switch Theme (`light` | `dark`)
+* [x] Scroll Menu 📜
+* [x] Switch Theme (`🌝 light` | `🌚 dark`)
 * [x] Popup
-* [x] Slider (library: Swiper)
-* [x] 404 Page
-* [x] Performance
-* [x] Accessibility - AAA (`A11y`)
-* [x] Search Engine Optimization (`SEO`)
+* [x] Slider🎚 (library: Swiper)
+* [x] 404 Page 😎
+* [x] Performance 🏎
+* [x] Accessibility - AAA (`😑👍 A11y`)
+* [x] Search Engine Optimization (`🔍 SEO`)
 
 ---
 
-[![Anurag's GitHub stats](https://github-readme-stats.vercel.app/api?username=QuickYoung&repo=School40-9B&hide=contribs,prs&show_icons=true&theme=transparent)](https://github.com/QuickYong/School40-9B)
+### Project link on ☛ [**Github Pages**](https://quickyoung.github.io/School40_9B/)
+
+![Performance for Iphone](assets/images/performanceOnIphone.png)
+![Performance for Desktop](assets/images/performanceOnDesktop.png)
