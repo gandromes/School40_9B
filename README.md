@@ -32,5 +32,11 @@
 
 ### Project link on ☛ [**Github Pages**](https://quickyoung.github.io/School40_9B/)
 
+¯ ¯ ¯ ¯ ¯ ¯ ¯ ¯ ¯ ¯ ¯ ¯ ¯ ¯⇑⇑⇑⇑⇑⇑⇑⇑⇑⇑⇑
+
+### Statistic:
+* ##### Statistics on the phone
 ![Performance for Iphone](assets/images/performanceOnIphone.png)
+
+* ##### Statistics on the computer
 ![Performance for Desktop](assets/images/performanceOnDesktop.png)
