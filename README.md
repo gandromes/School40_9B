@@ -1,5 +1,5 @@
 # МБУ School 40 9b <3
-[![Adaptive demonstration](assets/images/AdaptiveDemonstretion.png)](https://quickyoung.github.io/School40_9B/)
+[![Adaptive Demonstration](assets/images/AdaptiveDemonstration.png)](https://quickyoung.github.io/School40_9B/)
 
 # About the project:
 * This project made at the beginning of 9th grade, so that everyone who studied in my class could see their own and general photos, they can remember something etc...
