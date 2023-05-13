@@ -243,10 +243,15 @@ p {
     font-family: inherit;
     cursor: pointer;
     padding: 0.7rem 2rem;
-    -webkit-transition: color 0.2s linear, background 0.2s linear, -webkit-box-shadow 0.2s linear, -webkit-transform 0.1s linear;
-    transition: color 0.2s linear, background 0.2s linear, -webkit-box-shadow 0.2s linear, -webkit-transform 0.1s linear;
-    transition: color 0.2s linear, background 0.2s linear, box-shadow 0.2s linear, transform 0.1s linear;
-    transition: color 0.2s linear, background 0.2s linear, box-shadow 0.2s linear, transform 0.1s linear, -webkit-box-shadow 0.2s linear, -webkit-transform 0.1s linear;
+    -webkit-transition: color 0.2s linear, background 0.2s linear,
+        -webkit-box-shadow 0.2s linear, -webkit-transform 0.1s linear;
+    transition: color 0.2s linear, background 0.2s linear,
+        -webkit-box-shadow 0.2s linear, -webkit-transform 0.1s linear;
+    transition: color 0.2s linear, background 0.2s linear,
+        box-shadow 0.2s linear, transform 0.1s linear;
+    transition: color 0.2s linear, background 0.2s linear,
+        box-shadow 0.2s linear, transform 0.1s linear,
+        -webkit-box-shadow 0.2s linear, -webkit-transform 0.1s linear;
 }
 .nav__link--btn:hover {
     background-color: var(--blue);
@@ -328,6 +333,9 @@ p {
         width: 100%;
         -webkit-transition: color 0.22s linear;
         transition: color 0.22s linear;
+    }
+    .nav .nav__link:not(.nav__link--btn):first-child {
+        padding-top: 2rem;
     }
     .nav .nav__link:not(.nav__link--btn)::after {
         display: none;
@@ -1287,104 +1295,107 @@ body.dark .modal {
 }
 
 /* Optimized for Apple Watch \(o_O)/ */
-@media (max-width: 244px){
-  .autor__content {
-    display: none;
-  }
-  .nav .nav__link:not(.nav__link--btn) {
-    padding: 0.4rem 0;
-  }
-  .nav .nav__link:first-child {
-    padding-top: 0.8rem;
-  }
-  .nav .nav__link--btn {
-    padding: 0.3rem 4.4rem;
-  }
-  .header {
-    padding: .2rem 0;
-  }
-  .header.fixed {
-    padding: .2rem 0;
-  }
-  .autor__avatar {
-    width: 45px;
-    height: 45px;
-  }
-  .autor__avatar img {
-    width: 45px;
-    height: 45px;
-  }
-  .intro {
-    height: 140px;
-  }
-  .intro__title {
-    font-size: 3.22rem;
-  }
-  .intro__title span {
-    font-size: 1rem;
-  }
-  .intro__inner {
-    padding: 1.5rem 0;
-  }
-  .section {
-    margin: 1.6rem 0;
-  }
-  .section__title {
-    font-size: 1.5rem;
-    margin-bottom: 1rem;
-  }
-  .section__title::after {
-    margin: .5rem auto;
-    width: 85%;
-    height: 0.5rem;
-  }
-  .block__text {
-    font-size: .9rem;
-  }
-  .history__photo {
-    margin-bottom: 0;
-    width: 60px;
-    height: 60px;
-  }
-  .history__content {
-    padding-top: 0;
-    padding-bottom: 0;
-  }
-  .history__text {
-    font-size: .8rem;
-  }
-  .history__autor {
-    font-size: .8rem;
-  }
-  .history__autor::before {
-    width: 0.33rem;
-    height: 0.33rem;
-  }
-  .footer {
-    padding: 0.9rem 0 0.5rem;
-  }
-  .footer__time {
-    margin-bottom: 0;
-  }
-  .footer__date {
-    margin-top: .4rem;
-  }
-  .footer__questions {
-    margin-bottom: 0.5rem;
-  }
-  .footer__when {
-    margin-bottom: .8rem;
-  }
-  .footer__person:not(:last-child) {
-    margin-bottom: 0rem;
-  }
-  .modal__title {
-    font-size: 2rem;
-  }
-  .modal__image {
-    width: 82%;
-  }
-  .modal__text {
-    font-size: .8rem;
-  }
+@media (max-width: 244px) {
+    .autor__content {
+        display: none;
+    }
+    .nav .nav__link:not(.nav__link--btn) {
+        padding: 0.4rem 0;
+    }
+    .nav .nav__link:not(.nav__link--btn):first-child {
+        padding-top: 0.8rem;
+    }
+    .nav .nav__link:first-child {
+        padding-top: 0.8rem;
+    }
+    .nav .nav__link--btn {
+        padding: 0.3rem 4.4rem;
+    }
+    .header {
+        padding: 0.2rem 0;
+    }
+    .header.fixed {
+        padding: 0.2rem 0;
+    }
+    .autor__avatar {
+        width: 45px;
+        height: 45px;
+    }
+    .autor__avatar img {
+        width: 45px;
+        height: 45px;
+    }
+    .intro {
+        height: 140px;
+    }
+    .intro__title {
+        font-size: 3.22rem;
+    }
+    .intro__title span {
+        font-size: 1rem;
+    }
+    .intro__inner {
+        padding: 1.5rem 0;
+    }
+    .section {
+        margin: 1.6rem 0;
+    }
+    .section__title {
+        font-size: 1.5rem;
+        margin-bottom: 1rem;
+    }
+    .section__title::after {
+        margin: 0.5rem auto;
+        width: 85%;
+        height: 0.5rem;
+    }
+    .block__text {
+        font-size: 0.9rem;
+    }
+    .history__photo {
+        margin-bottom: 0;
+        width: 60px;
+        height: 60px;
+    }
+    .history__content {
+        padding-top: 0;
+        padding-bottom: 0;
+    }
+    .history__text {
+        font-size: 0.8rem;
+    }
+    .history__autor {
+        font-size: 0.8rem;
+    }
+    .history__autor::before {
+        width: 0.33rem;
+        height: 0.33rem;
+    }
+    .footer {
+        padding: 0.9rem 0 0.5rem;
+    }
+    .footer__time {
+        margin-bottom: 0;
+    }
+    .footer__date {
+        margin-top: 0.4rem;
+    }
+    .footer__questions {
+        margin-bottom: 0.5rem;
+    }
+    .footer__when {
+        margin-bottom: 0.8rem;
+    }
+    .footer__person:not(:last-child) {
+        margin-bottom: 0rem;
+    }
+    .modal__title {
+        font-size: 2rem;
+    }
+    .modal__image {
+        width: 82%;
+    }
+    .modal__text {
+        font-size: 0.8rem;
+    }
 }
