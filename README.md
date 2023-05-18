@@ -1,5 +1,5 @@
 # МБУ School 40 9b <3
-[![Adaptive Demonstration](assets/images/_service/AdaptiveDemonstration.png)](https://quickyoung.github.io/School40_9B/)
+[![Adaptive Demonstration](assets/images/_service/photosForReadmeOnGithub/AdaptiveDemonstration.png)](https://quickyoung.github.io/School40_9B/)
 
 # About the project:
 * This project made at the beginning of 9th grade, so that everyone who studied in my class could see their own and general photos, they can remember something etc...
@@ -36,7 +36,7 @@
 
 ### Statistic:
 * ##### Statistics on the phone
-![Performance for Iphone](assets/images/_service/performanceOnPhone.png)
+![Performance for Iphone](assets/images/_service/photosForReadmeOnGithub/performanceOnPhone.png)
 
 * ##### Statistics on the computer
-![Performance for Desktop](assets/images/_service/performanceOnDesktop.png)
+![Performance for Desktop](assets/images/_service/photosForReadmeOnGithub/performanceOnDesktop.png)
