@@ -30,7 +30,7 @@
 
 ---
 
-### Project link on ☛ [**Github Pages**](https://quickyoung.github.io/School40_9B/)
+### Project link on ☛ [**Github Pages**](https://gandromes.github.io/School40_9B/)
 
 ---
 
